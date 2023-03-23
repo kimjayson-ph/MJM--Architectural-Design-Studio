@@ -5,134 +5,588 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.2.0/mdb.min.css"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
       rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
     />
-    <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
-      rel="stylesheet"
-    />
-    <title>MJM Architectural Design Studio</title>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+      crossorigin="anonymous"
+    ></script>
+
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
   </head>
   <body>
-    <footer class="bg-light text-center text-lg-start">
-      <!-- Grid container -->
-      <div class="container-fluid p-4">
-        <!--Grid row-->
-        <div class="row">
-          <!--Grid column Contact Details-->
-          <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-            <h5 class="text-uppercase">Contact</h5>
+    <!-- Navbar  -->
+    <nav class="navbar fixed-top navbar-expand-md navbar-dark p-md-3">
+      <div class="container-fluid">
+        <!-- LOGO -->
+        <a class="navbar-brand text-black text-bold" href="#"
+          ><img class="logo" src="images/logo.png" alt="logo"
+        /></a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <!-- Navbar Menu -->
+        <div
+          class="collapse navbar-collapse justify-content-end"
+          id="navbarNav"
+        >
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link px-3 textc" href="#">HOME</a>
+            </li>
+            <li class="nav-item px-1">
+              <a class="nav-link textc" href="#">WORKS</a>
+            </li>
+            <li class="nav-item px-1">
+              <a class="nav-link textc" href="#">ABOUT</a>
+            </li>
+            <li class="nav-item">
+              <a class="btn btncolor rounded-3" href="#">CONTACT ME</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
 
-            <ul class="list-unstyled mb-0">
-              <li>
-                <a href="#!" class="text-dark">Address</a>
-              </li>
-              <li>
-                <a href="#!" class="text-dark">Email</a>
-              </li>
-              <li>
-                <a href="#!" class="text-dark">Contact</a>
-              </li>
-            </ul>
-            <!-- Social Media -->
-            <a
-              class="btn btn-primary btn-floating mt-3"
-              style="background-color: #3b5998"
-              href="#!"
-              role="button"
-              ><i class="fab fa-facebook-f"></i
-            ></a>
-            <a
-              class="btn btn-primary btn-floating"
-              style="background-color: #ac2bac"
-              href="#!"
-              role="button"
-              ><i class="fab fa-instagram"></i
-            ></a>
-            <a
-              class="btn btn-primary btn-floating"
-              style="background-color: #0082ca"
-              href="#!"
-              role="button"
-              ><i class="fab fa-linkedin-in"></i
-            ></a>
+    <!-- Landing page  Content  -->
+    <section class="landingpage">
+      <div
+        class="banner-image d-flex justify-content-center align-items-center"
+      >
+        <!-- Backgroud blur -->
+        <div class="container bgblur"></div>
+        <div class="content text-center">
+          <!-- Logo -->
+          <div class="logo2"><img src="images/logo.png" alt="logo" /></div>
+          <!-- Heading -->
+          <div class="hding">
+            <h1 class="text-white pt-4 l">mjm architectural</h1>
+            <h1 class="text-white tspace">design studio</h1>
           </div>
-          <!--Grid column-->
+          <!-- Horizontal Line -->
+          <div class="py-3"><hr class="line" /></div>
+          <!-- Paragraph -->
+          <div>
+            <p class="text-white pb-0 mb-0">
+              <i> Your story, our inspiration.Your design, our passion.</i>
+            </p>
+            <p class="text-white pt-0 mt-0">
+              <i> Crafting architectural narratives, one design at a time.</i>
+            </p>
+          </div>
+          <!-- Button -->
+          <div class="p-2">
+            <a class="btn btncolor rounded-3 px-5" href="#">SERVICES</a>
+          </div>
+          <div class="p-2">
+            <a class="btn btncolor rounded-3 px-3" href="#">DIGITAL PRODUCTS</a>
+          </div>
+        </div>
+      </div>
+    </section>
 
-          <!--Grid column Quick links 1-->
-          <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-            <h5 class="text-uppercase">Links</h5>
+    <!-- Featured Projects -->
+    <section>
+      <div>
+        <!-- Heading -->
+        <div class="text-center mt-5 mb-3"><h2>FEATURED PROJECTS</h2></div>
+        <div class="d-flex justify-content-center gap-4 mb-5">
+          <!-- Projects Menu -->
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="#"> RESIDENTIAL</a>
+            </li>
+          </ul>
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="#"> COMMERCIAL</a>
+            </li>
+          </ul>
+
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="#"> INSDUSTRIAL</a>
+            </li>
+          </ul>
+
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="#">INTERIORS</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!-- Card 1 -->
+      <div class="d-flex justify-content-evenly">
+        <div class="card">
+          <img src="images/Rectangle 1.png" class="card-img" alt="" />
+          <div class="card-body">
+            <h3 class="card-title">PROJECT</h3>
+            <p class="card-subtitle">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque,
+              unde!
+            </p>
+            <p class="card-info">
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus
+              ipsum, facere non assumenda architecto ipsa incidunt totam in
+              explicabo vel laudantium. Ab expedita beatae magni dolorum veniam
+              magnam minima dolores?
+            </p>
+          </div>
+        </div>
+        <!-- Card 2-->
+        <div class="card">
+          <img src="images/Rectangle 2.png" class="card-img" alt="" />
+          <div class="card-body">
+            <h3 class="card-title">PROJECT</h3>
+            <p class="card-subtitle">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque,
+              unde!
+            </p>
+            <p class="card-info">
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus
+              ipsum, facere non assumenda architecto ipsa incidunt totam in
+              explicabo vel laudantium. Ab expedita beatae magni dolorum veniam
+              magnam minima dolores?
+            </p>
+          </div>
+        </div>
+        <!--  Card  3-->
+        <div class="card">
+          <img src="images/Rectangle 3.png" class="card-img" alt="" />
+          <div class="card-body">
+            <h3 class="card-title">PROJECT</h3>
+            <p class="card-subtitle">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque,
+              unde!
+            </p>
+            <p class="card-info">
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus
+              ipsum, facere non assumenda architecto ipsa incidunt totam in
+              explicabo vel laudantium. Ab expedita beatae magni dolorum veniam
+              magnam minima dolores?
+            </p>
+          </div>
+        </div>
+      </div>
+      <!-- Button -->
+      <div class="text-center mt-5">
+        <a class="btn btncolor btnp" href="#">VIEW ALL PROJECTS</a>
+      </div>
+    </section>
+
+    <section>
+      <div class="mt-5">
+        <img class="bgimg" src="images/bg-img2.png" alt="" />
+      </div>
+    </section>
+
+    <!-- Services -->
+    <section>
+      <div class="text-center my-5">
+        <h2>SERVICES</h2>
+      </div>
+      <!-- Card 1 -->
+      <div class="d-flex justify-content-evenly">
+        <div class="card cards">
+          <img src="images/services1.png" class="card-img" alt="" />
+          <div class="card-body">
+            <h3 class="card-title">PROJECT</h3>
+            <p class="card-subtitle">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque,
+              unde!
+            </p>
+            <p class="card-info">
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus
+              ipsum, facere non assumenda architecto ipsa incidunt totam in
+              explicabo vel laudantium. Ab expedita beatae magni dolorum veniam
+              magnam minima dolores?
+            </p>
+          </div>
+        </div>
+        <!-- Card 2 -->
+        <div class="card cards">
+          <img src="images/services2.png" class="card-img" alt="" />
+          <div class="card-body">
+            <h3 class="card-title">PROJECT</h3>
+            <p class="card-subtitle">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque,
+              unde!
+            </p>
+            <p class="card-info">
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus
+              ipsum, facere non assumenda architecto ipsa incidunt totam in
+              explicabo vel laudantium. Ab expedita beatae magni dolorum veniam
+              magnam minima dolores?
+            </p>
+          </div>
+        </div>
+        <!-- Card 3 -->
+        <div class="card cards">
+          <img src="images/services3.png" class="card-img" alt="" />
+          <div class="card-body">
+            <h3 class="card-title">PROJECT</h3>
+            <p class="card-subtitle">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque,
+              unde!
+            </p>
+            <p class="card-info">
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus
+              ipsum, facere non assumenda architecto ipsa incidunt totam in
+              explicabo vel laudantium. Ab expedita beatae magni dolorum veniam
+              magnam minima dolores?
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Carousel -->
+    <section>
+      <div id="carouselExampleDark" class="carousel carousel-dark slide">
+        <div class="carousel-indicators">
+          <button
+            type="button"
+            data-bs-target="#carouselExampleDark"
+            data-bs-slide-to="0"
+            class="active"
+            aria-current="true"
+            aria-label="Slide 1"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleDark"
+            data-bs-slide-to="1"
+            aria-label="Slide 2"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleDark"
+            data-bs-slide-to="2"
+            aria-label="Slide 3"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleDark"
+            data-bs-slide-to="3"
+            aria-label="Slide 4"
+          ></button>
+        </div>
+        <!-- Carousel inner -->
+        <div class="carousel-inner">
+          <!-- Carousel 1 -->
+          <div class="carousel-item active" data-bs-interval="10000">
+            <img
+              src="images/carouselpic1.png"
+              class="d-block w-100"
+              alt="..."
+            />
+
+            <div class="carousel-caption top-0 mt-5">
+              <div class="container bgblur2">
+                <p class="carouseltext">
+                  Enjoy convenient access to your files from anywhere with ease!
+                  Plan your day ahead and add a personal touch by customizing it
+                  with adorable stickers that reflect your personality!
+                </p>
+                <div class="text-center">
+                  <button
+                    class="btn btncolor"
+                    data-bs-toggle="modal"
+                    data-bs-target="#booking-modal"
+                  >
+                    SHOP DIGITAL PRODUCTS
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Carousel 2 -->
+          <div class="carousel-item" data-bs-interval="2000">
+            <img
+              src="images/landing-page-pic.jpg"
+              class="d-block w-100"
+              alt="..."
+            />
+            <div class="carousel-caption top-0 mt-5">
+              <div class="container bgblur2">
+                <p class="carouseltext">
+                  Enjoy convenient access to your files from anywhere with ease!
+                  Plan your day ahead and add a personal touch by customizing it
+                  with adorable stickers that reflect your personality!
+                </p>
+                <div class="text-center">
+                  <button
+                    class="btn btncolor"
+                    data-bs-toggle="modal"
+                    data-bs-target="#booking-modal"
+                  >
+                    SHOP DIGITAL PRODUCTS
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-caption d-none d-md-block"></div>
+          </div>
+          <!-- Carousel 3 -->
+          <div class="carousel-item">
+            <img
+              src="images/carouselpic1.png"
+              class="d-block w-100"
+              alt="..."
+            />
+            <div class="carousel-caption top-0 mt-5">
+              <div class="container bgblur2">
+                <p class="carouseltext">
+                  Enjoy convenient access to your files from anywhere with ease!
+                  Plan your day ahead and add a personal touch by customizing it
+                  with adorable stickers that reflect your personality!
+                </p>
+                <div class="text-center">
+                  <button
+                    class="btn btncolor"
+                    data-bs-toggle="modal"
+                    data-bs-target="#booking-modal"
+                  >
+                    SHOP DIGITAL PRODUCTS
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-caption d-none d-md-block"></div>
+          </div>
+          <!-- Carousel 4 -->
+          <div class="carousel-item">
+            <img
+              src="images/landing-page-pic.jpg"
+              class="d-block w-100"
+              alt="..."
+            />
+            <div class="carousel-caption top-0 mt-5">
+              <div class="container bgblur2">
+                <p class="carouseltext">
+                  Enjoy convenient access to your files from anywhere with ease!
+                  Plan your day ahead and add a personal touch by customizing it
+                  with adorable stickers that reflect your personality!
+                </p>
+                <div class="text-center">
+                  <button
+                    class="btn btncolor"
+                    data-bs-toggle="modal"
+                    data-bs-target="#booking-modal"
+                  >
+                    SHOP DIGITAL PRODUCTS
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-caption d-none d-md-block"></div>
+          </div>
+        </div>
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#carouselExampleDark"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#carouselExampleDark"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </section>
+    <!-- News Letter -->
+    <section>
+      <div class="text-center my-5">
+        <div><h5>JOIN MY</h5></div>
+        <div><h2>NEWSLETTER</h2></div>
+        <div>
+          <p class="mb-0">Sign up to my newsletter and be the first to</p>
+          <p class="m-0">know about new digital products, promo</p>
+          <p class="m-0">codes and special deals!</p>
+        </div>
+      </div>
+
+      <div class="text-center mt-4">
+        <form action="">
+          <input
+            class="iemail p-2"
+            type="email"
+            placeholder="enter your email"
+          />
+          <button class="btn btncolor btnsub" type="submit">SUBSCRIBE</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- Reviews -->
+    <section>
+      <div class="text-center my-5">
+        <div><h2>REVIEWS</h2></div>
+        <div>
+          <p class="w-25 mx-auto mb-0">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eaque
+            ipsam ex blanditiis incidunt ut officiis et iusto reiciendis
+            laudantium quasi.
+          </p>
+          <p class="m-0">miss braga</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured on -->
+
+    <section>
+      <div class="text-center my-5">
+        <div><h2>FEATURED ON</h2></div>
+      </div>
+      <div class="d-flex justify-content-evenly my-5">
+        <img src="images/Bluprint-Logo 1.png" alt="" />
+        <img src="images/previewLogo 1.png" alt="" />
+        <img src="images/Vector.png" alt="" />
+        <img src="images/logo-t 1.png" alt="" />
+      </div>
+    </section>
+
+    <!-- Footer -->
+
+    <footer class="bgfooter text-center text-lg-start">
+      <div class="container-fluid p-4">
+        <div class="row d-flex justify-content-evenly">
+          <!-- Contact Details-->
+          <div class="col-lg-4 mb-4 mb-md-0">
+            <p class="">CONTACT</p>
+            <p class="m-0">1111 - 222 - 333</p>
+            <p class="m-0">ar.mjoenaren@gmail.com</p>
+            <p class="m-0">Brgy. Kausawagan</p>
+            <p class="m-0">Cagayan de Oro City</p>
+            <p>Misamis Oriental, 9000</p>
+            <!-- Social Media -->
+            <a class="btn btn-floating mt-2" href="#!" role="button"
+              ><img src="images/fbicon.png" alt="" />
+            </a>
+            <a class="btn btn-floating mt-2" href="#!" role="button"
+              ><img src="images/igicon.png" alt=""
+            /></a>
+            <a class="btn btn-floating mt-2" href="#!" role="button"
+              ><img src="images/Liicon.png" alt=""
+            /></a>
+          </div>
+
+          <!-- Quick links 1-->
+          <div class="col-lg-4 mb-4 mb-md-0">
+            <p>LINKS</p>
 
             <ul class="list-unstyled">
               <li>
-                <a href="#!" class="text-dark">Link 1</a>
+                <a class="btn text-white p-0" href="#!">about</a>
               </li>
               <li>
-                <a href="#!" class="text-dark">Link 2</a>
+                <a class="btn text-white p-0" href="#!">works</a>
               </li>
               <li>
-                <a href="#!" class="text-dark">Link 3</a>
+                <a class="btn text-white p-0" href="#!">services</a>
               </li>
               <li>
-                <a href="#!" class="text-dark">Link 4</a>
+                <a class="btn text-white p-0" href="#!">digital products</a>
+              </li>
+              <li>
+                <a class="btn text-white p-0" href="#!">payments</a>
+              </li>
+              <li>
+                <a class="btn text-white p-0" href="#!">F A Q s</a>
               </li>
             </ul>
           </div>
-          <!--Grid column-->
 
-          <!--Grid column Quick links 2-->
-          <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-            <h5 class="text-uppercase">Links</h5>
-
-            <ul class="list-unstyled mb-0">
-              <li>
-                <a href="#!" class="text-dark">Link 1</a>
-              </li>
-              <li>
-                <a href="#!" class="text-dark">Link 2</a>
-              </li>
-              <li>
-                <a href="#!" class="text-dark">Link 3</a>
-              </li>
-              <li>
-                <a href="#!" class="text-dark">Link 4</a>
-              </li>
-            </ul>
-          </div>
-          <!--Grid column-->
-
-          <!--Grid column News letter-->
-          <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+          <!-- column News letter -->
+          <div class="col-lg-4 mb-4 mb-md-0">
             <form action="">
-              <h5 class="text-uppercase">NewsLetter</h5>
+              <p>NEWSLETTER</p>
 
               <ul class="list-unstyled">
                 <li>
-                  <p class="">Sign up for our newsletter</p>
+                  <p class="m-0">Subscribe to receive updates, access to</p>
+                  <p class="mt-0">promo codes, and more</p>
                 </li>
+
                 <li class="mb-3">
                   <input
+                    class="p-2 w-75 rounded-3"
                     type="email"
-                    class="form-control"
-                    id="exampleFormControlInput1"
-                    placeholder="Enter your email address"
+                    placeholder="enter your email"
                   />
                 </li>
                 <li>
-                  <button type="submit" class="btn btn-success">
-                    Subscribe
+                  <button type="submit" class="btn btncolor w-75">
+                    SUBSCRIBE
                   </button>
                 </li>
               </ul>
             </form>
           </div>
-          <!--Grid column-->
         </div>
-        <!--Grid row-->
-        <a class="btn btn-success mt-3" href="#!" role="button">LOGO</a>
+        <!-- Footer Logo -->
+        <div class="d-flex justify-content-between">
+          <div>
+            <a class="btn mt-5" href="#" role="button"
+              ><img src="images/footerlogo.png" alt=""
+            /></a>
+          </div>
+
+          <div class="">
+            <p class="tnc">TERMS & CONDITIONS | PRIVACY POLICY</p>
+          </div>
+        </div>
       </div>
-      <!-- Grid container -->
     </footer>
+
+    <!-- javascript -->
+    <!-- Carousel js -->
+    <script>
+      const myCarouselElement = document.querySelector("#myCarousel");
+
+      const carousel = new bootstrap.Carousel(myCarouselElement, {
+        interval: 2000,
+        touch: false,
+      });
+
+      const myCarousel = document.getElementById("myCarousel");
+
+      myCarousel.addEventListener("slide.bs.carousel", (event) => {
+        // do something...
+      });
+    </script>
+    <script type="text/javascript">
+      var nav = document.querySelector("nav");
+
+      window.addEventListener("scroll", function () {
+        if (window.pageYOffset > 100) {
+          nav.classList.add("bg-success", "shadow");
+        } else {
+          nav.classList.remove("bg-success", "shadow");
+        }
+      });
+    </script>
   </body>
 </html>
