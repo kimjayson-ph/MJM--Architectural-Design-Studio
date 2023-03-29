@@ -240,3 +240,8 @@
 .commi {
   margin-bottom: 10%;
 }
+
+/* LOGIN PAGE */
+.login-form {
+  width: 400px;
+}
