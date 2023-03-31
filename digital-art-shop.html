@@ -59,7 +59,15 @@
               <a class="nav-link text-color" href="#">ABOUT</a>
             </li>
             <li class="nav-item">
-              <a class="btn btncolor rounded-3" href="#">ADD TO CART</a>
+              <a
+                class="btn btncolor rounded-3"
+                type="button"
+                data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasRight"
+                aria-controls="offcanvasRight"
+                href="#"
+                >ADD TO CART</a
+              >
             </li>
           </ul>
         </div>
@@ -176,6 +184,34 @@
             <a href="#" class="card-link">Card link</a>
             <a href="#" class="card-link">Another link</a>
           </div> -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Add to cart -->
+    <section>
+      <div
+        class="offcanvas offcanvas-end"
+        tabindex="-1"
+        id="offcanvasRight"
+        aria-labelledby="offcanvasRightLabel"
+      >
+        <div class="offcanvas-header">
+          <h3 class="offcanvas-title" id="offcanvasRightLabel">CART</h3>
+
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="offcanvas"
+            aria-label="Close"
+          ></button>
+        </div>
+        <hr class="mt-0" />
+
+        <div
+          class="offcanvas-body d-flex flex-column justify-content-center m-auto"
+        >
+          <h5>YOUR CART IS EMPTY</h5>
         </div>
       </div>
     </section>

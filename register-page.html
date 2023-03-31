@@ -17,7 +17,7 @@
     ></script>
 
     <link rel="stylesheet" href="style.css" />
-    <title>Login</title>
+    <title>Register</title>
   </head>
   <body>
     <!-- Navbar  -->
@@ -65,61 +65,70 @@
       </div>
     </nav>
 
-    <!-- Login -->
+    <!-- Register -->
     <section>
       <div class="container d-flex justify-content-center">
         <div class="my-5 py-4">
           <h3 class="text-center mb-4">REGISTER</h3>
           <p class="mb-4 text-center">Please fill in the information below:</p>
-
-          <form action="" class="login-form">
+          <div class="bg-danger"><p id="errorbox"></p></div>
+          <form action="" class="login-form needs-validation" novalidate>
             <div class="form-floating mb-3">
               <input
                 type="text"
                 class="form-control"
-                id="floatingInput-name"
+                id="fname"
                 placeholder="First name"
                 required
               />
-              <label for="floatingInput-name">First name</label>
+              <label for="floatingInputfname">First name</label>
             </div>
             <div class="form-floating mb-3">
               <input
                 type="text"
                 class="form-control"
-                id="floatingInput-lastname"
+                id="lname"
                 placeholder="Last name"
                 required
               />
-              <label for="floatingInput-lastname">Last name</label>
+              <label for="floatingInputlastname">Last name</label>
             </div>
             <div class="form-floating mb-3">
               <input
                 type="email"
                 class="form-control"
-                id="floatingInput"
+                id="email"
                 placeholder="name@example.com"
                 required
               />
-              <label for="floatingInput">Email address</label>
+              <label for="floatingInputemail">Email address</label>
             </div>
             <div class="form-floating mb-3">
               <input
                 type="password"
                 class="form-control"
-                id="floatingPassword"
+                id="pass"
                 placeholder="Password"
                 required
               />
               <label for="floatingPassword">Password</label>
             </div>
-            <a
-              class="btn btncolor d-grid mb-3"
-              type="button"
-              action="submit"
-              href=""
-              >CREATE MY ACCOUNT</a
-            >
+            <div class="form-floating mb-3">
+              <input
+                type="password"
+                class="form-control"
+                id="cpass"
+                placeholder="Confirm Password"
+                required
+              />
+              <label for="floatingPassword">Confirm Password</label>
+            </div>
+
+            <div class="d-grid">
+              <button class="btn btncolor mb-3 buttonregister" type="submit">
+                CREATE MY ACCOUNT
+              </button>
+            </div>
           </form>
         </div>
       </div>
@@ -217,5 +226,7 @@
         </div>
       </div>
     </footer>
+
+    <script src="script.js" defer></script>
   </body>
 </html>

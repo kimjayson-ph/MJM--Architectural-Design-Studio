@@ -72,19 +72,36 @@
           <h3 class="text-center mb-4">LOGIN</h3>
           <p class="mb-4 text-center">Please enter your e-mail and password:</p>
 
-          <form action="" class="login-form">
-            <input class="form-control mb-3" type="email" placeholder="Email" />
+          <div class="bg-danger"><p id="errorbox"></p></div>
+          <form action="" class="login-form needs-validation" novalidate>
             <input
               class="form-control mb-3"
+              id="emailAddress"
+              type="email"
+              placeholder="Email"
+              required
+            />
+
+            <input
+              class="form-control mb-3"
+              id="passWord"
               type="password"
               placeholder="Password"
+              required
             />
-            <a class="btn btncolor d-grid mb-3" type="button" href="#">LOGIN</a>
+
+            <div class="d-grid">
+              <button class="btn btncolor mb-3 loginbutton">LOGIN</button>
+            </div>
           </form>
 
           <p class="text-center">
             Don't have an account?
-            <a class="btn btn-link text-decoration-none" href="#">Create one</a>
+            <a
+              class="btn btn-link text-decoration-none"
+              href="register-page.html"
+              >Create one</a
+            >
           </p>
         </div>
       </div>
@@ -182,5 +199,7 @@
         </div>
       </div>
     </footer>
+
+    <script src="script.js" defer></script>
   </body>
 </html>
