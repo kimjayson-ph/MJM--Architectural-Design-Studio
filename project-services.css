@@ -1,0 +1,102 @@
+.btncolor {
+  background-color: #39a90fff !important;
+  color: #ffff !important;
+  fill: solid !important;
+}
+
+.btn-sendM {
+  width: 652px;
+  letter-spacing: 4px;
+}
+
+.iemail2 {
+  border: 2px solid;
+  width: 325px;
+  height: 35px;
+  border-radius: 5px;
+  margin-right: 2px;
+  background-color: rgba(57, 169, 15, 0.2);
+}
+
+.iemail3 {
+  border: 2px solid;
+  width: 652px;
+  height: 241px;
+  border-radius: 5px;
+  margin-right: 2px;
+  background-color: rgba(57, 169, 15, 0.2);
+}
+
+/* Navbar */
+.project-link {
+  position: absolute;
+  top: 40px;
+  display: none;
+}
+.project-dropdown:hover .project-link {
+  display: block;
+}
+
+.nav {
+  background-color: rgb(255, 255, 255);
+  color: #000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  transition: top 0.2s ease-in-out;
+  z-index: 100;
+}
+
+/* Project */
+.project-section {
+  margin-top: 15%;
+}
+.cardp {
+  width: 349px;
+  height: 515px;
+  border: 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.cbody {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  right: -100%;
+  position: absolute;
+  background: #1f3d4738;
+  backdrop-filter: blur(5px);
+  color: #ffff;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transition: 2s;
+}
+
+.card:hover .cbody {
+  right: 0;
+}
+
+.card-info {
+  line-height: 25px;
+  margin: 40px 0;
+}
+
+.card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover !important;
+}
+
+/* Services */
+.services-section {
+  margin-top: 8%;
+}
+
+/* About me */
+.about-section {
+  padding-bottom: 600px;
+}
