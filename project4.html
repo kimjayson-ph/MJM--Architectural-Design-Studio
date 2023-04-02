@@ -4,7 +4,260 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <!-- CDN -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css"
+    />
+    <!-- CSS -->
+    <link rel="stylesheet" href="project-services.css" />
+    <title>Project 4</title>
   </head>
-  <body></body>
+  <body>
+    <!-- Navbar -->
+    <section>
+      <nav class="navbar fixed-top navbar-expand-md navbar-dark p-md-3">
+        <div class="container-fluid">
+          <!-- LOGO -->
+          <a class="navbar-brand text-black text-bold" href="#"
+            ><img class="logo" src="images/logo.png" alt="logo"
+          /></a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon bg-success"></span>
+          </button>
+          <!-- Navbar Menu -->
+          <div
+            class="collapse navbar-collapse justify-content-end"
+            id="navbarNav"
+          >
+            <ul class="navbar-nav">
+              <li class="nav-item position-relative project-dropdown">
+                <a class="nav-link px-1 text-black" href="">PROJECTS</a>
+                <!-- Project dropdown -->
+                <div class="project-link">
+                  <ul class="">
+                    <li class="nav-item list-unstyled">
+                      <a class="nav-link text-black p-0" href="">link1</a>
+                    </li>
+                    <li class="nav-item list-unstyled">
+                      <a class="nav-link text-black p-0" href="">link2</a>
+                    </li>
+                    <li class="nav-item list-unstyled">
+                      <a class="nav-link text-black p-0" href="">link3</a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+
+              <li class="nav-item px-1 position-relative project-dropdown">
+                <a class="nav-link text-black" href="#">PRODUCTS</a>
+                <!-- Products dropdown -->
+                <div class="project-link">
+                  <ul class="">
+                    <li class="nav-item list-unstyled">
+                      <a class="nav-link text-black p-0" href="">link1</a>
+                    </li>
+                    <li class="nav-item list-unstyled">
+                      <a class="nav-link text-black p-0" href="">link2</a>
+                    </li>
+                    <li class="nav-item list-unstyled">
+                      <a class="nav-link text-black p-0" href="">link3</a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+
+              <li class="nav-item px-1 position-relative project-dropdown">
+                <a class="nav-link text-black" href="#">ABOUT</a>
+                <!-- About dropdown -->
+                <div class="project-link">
+                  <ul class="">
+                    <li class="nav-item list-unstyled">
+                      <a class="nav-link text-black p-0" href="">link1</a>
+                    </li>
+                    <li class="nav-item list-unstyled">
+                      <a class="nav-link text-black p-0" href="">link2</a>
+                    </li>
+                    <li class="nav-item list-unstyled">
+                      <a class="nav-link text-black p-0" href="">link3</a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li class="nav-item">
+                <a class="btn btncolor rounded-3" href="#">CONTACT ME</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </section>
+
+    <!-- Project -->
+    <section class="container project-section">
+      <h3 class="my-5 display-3">Project 4</h3>
+
+      <!-- Project details -->
+      <div class="row">
+        <div class="col-sm pt-3">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur
+          ex facere maxime nostrum itaque voluptatum possimus nam corporis
+          dolores amet tenetur id minima, doloremque laboriosam a quod! Esse,
+          enim non?
+        </div>
+
+        <div class="col-sm">
+          <div class="accordion accordion-flush" id="accordionFlushExample">
+            <!-- Accordian 1 -->
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#flush-collapseOne"
+                  aria-expanded="false"
+                  aria-controls="flush-collapseOne"
+                >
+                  Location
+                </button>
+              </h2>
+              <div
+                id="flush-collapseOne"
+                class="accordion-collapse collapse"
+                data-bs-parent="#accordionFlushExample"
+              >
+                <div class="accordion-body">
+                  Placeholder content for this accordion, which is intended to
+                  demonstrate the <code>.accordion-flush</code> class. This is
+                  the first item's accordion body.
+                </div>
+              </div>
+            </div>
+            <!-- Accordion 2 -->
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#flush-collapseTwo"
+                  aria-expanded="false"
+                  aria-controls="flush-collapseTwo"
+                >
+                  Status
+                </button>
+              </h2>
+              <div
+                id="flush-collapseTwo"
+                class="accordion-collapse collapse"
+                data-bs-parent="#accordionFlushExample"
+              >
+                <div class="accordion-body">
+                  Placeholder content for this accordion, which is intended to
+                  demonstrate the <code>.accordion-flush</code> class. This is
+                  the second item's accordion body. Let's imagine this being
+                  filled with some actual content.
+                </div>
+              </div>
+            </div>
+            <!-- Accordion 3 -->
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#flush-collapseThree"
+                  aria-expanded="false"
+                  aria-controls="flush-collapseThree"
+                >
+                  Size
+                </button>
+              </h2>
+              <div
+                id="flush-collapseThree"
+                class="accordion-collapse collapse"
+                data-bs-parent="#accordionFlushExample"
+              >
+                <div class="accordion-body">
+                  Placeholder content for this accordion, which is intended to
+                  demonstrate the <code>.accordion-flush</code> class. This is
+                  the third item's accordion body. Nothing more exciting
+                  happening here in terms of content, but just filling up the
+                  space to make it look, at least at first glance, a bit more
+                  representative of how this would look in a real-world
+                  application.
+                </div>
+              </div>
+            </div>
+            <!-- Accordion 4 -->
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#flush-collapse4"
+                  aria-expanded="false"
+                  aria-controls="flush-collapse4"
+                >
+                  Others
+                </button>
+              </h2>
+              <div
+                id="flush-collapse4"
+                class="accordion-collapse collapse"
+                data-bs-parent="#accordionFlushExample"
+              >
+                <div class="accordion-body">
+                  Placeholder content for this accordion, which is intended to
+                  demonstrate the <code>.accordion-flush</code> class. This is
+                  the third item's accordion body. Nothing more exciting
+                  happening here in terms of content, but just filling up the
+                  space to make it look, at least at first glance, a bit more
+                  representative of how this would look in a real-world
+                  application.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- JS -->
+    <script>
+      // navbar show when scroll up
+      var prevScrollpos = window.pageYOffset;
+
+      window.onscroll = function () {
+        var currentScrollPos = window.pageYOffset;
+        if (prevScrollpos > currentScrollPos) {
+          document.querySelector("nav").style.top = "0";
+        } else {
+          document.querySelector("nav").style.top = "-7.2rem";
+        }
+        prevScrollpos = currentScrollPos;
+      };
+    </script>
+  </body>
 </html>
