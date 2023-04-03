@@ -66,7 +66,8 @@
                 data-bs-target="#offcanvasRight"
                 aria-controls="offcanvasRight"
                 href="#"
-                >ADD TO CART</a
+              >
+                CART (<span class="total-items-in-cart"></span>)</a
               >
             </li>
           </ul>
@@ -91,100 +92,10 @@
         >
       </div>
 
-      <div class="container d-flex justify-content-center gap-3">
-        <!-- Card 1 -->
-        <div class="card" style="width: 345px; height: 345px">
-          <!-- <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <h6 class="card-subtitle mb-2 text-body-secondary">
-              Card subtitle
-            </h6>
-            <p class="card-text">
-              Some quick example text to build on the card title and make up the
-              bulk of the card's content.
-            </p>
-            <a href="#" class="card-link">Card link</a>
-            <a href="#" class="card-link">Another link</a>
-          </div> -->
-        </div>
-        <!-- Card 2 -->
-        <div class="card" style="width: 345px; height: 345px">
-          <!-- <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <h6 class="card-subtitle mb-2 text-body-secondary">
-              Card subtitle
-            </h6>
-            <p class="card-text">
-              Some quick example text to build on the card title and make up the
-              bulk of the card's content.
-            </p>
-            <a href="#" class="card-link">Card link</a>
-            <a href="#" class="card-link">Another link</a>
-          </div> -->
-        </div>
-        <!-- Card 3 -->
-        <div class="card" style="width: 345px; height: 345px">
-          <!-- <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <h6 class="card-subtitle mb-2 text-body-secondary">
-              Card subtitle
-            </h6>
-            <p class="card-text">
-              Some quick example text to build on the card title and make up the
-              bulk of the card's content.
-            </p>
-            <a href="#" class="card-link">Card link</a>
-            <a href="#" class="card-link">Another link</a>
-          </div> -->
-        </div>
-      </div>
-
-      <div class="container d-flex justify-content-center gap-3 mt-3">
-        <!-- Card 1 -->
-        <div class="card" style="width: 345px; height: 345px">
-          <!-- <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <h6 class="card-subtitle mb-2 text-body-secondary">
-              Card subtitle
-            </h6>
-            <p class="card-text">
-              Some quick example text to build on the card title and make up the
-              bulk of the card's content.
-            </p>
-            <a href="#" class="card-link">Card link</a>
-            <a href="#" class="card-link">Another link</a>
-          </div> -->
-        </div>
-        <!-- Card 2 -->
-        <div class="card" style="width: 345px; height: 345px">
-          <!-- <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <h6 class="card-subtitle mb-2 text-body-secondary">
-              Card subtitle
-            </h6>
-            <p class="card-text">
-              Some quick example text to build on the card title and make up the
-              bulk of the card's content.
-            </p>
-            <a href="#" class="card-link">Card link</a>
-            <a href="#" class="card-link">Another link</a>
-          </div> -->
-        </div>
-        <!-- Card 3 -->
-        <div class="card" style="width: 345px; height: 345px">
-          <!-- <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <h6 class="card-subtitle mb-2 text-body-secondary">
-              Card subtitle
-            </h6>
-            <p class="card-text">
-              Some quick example text to build on the card title and make up the
-              bulk of the card's content.
-            </p>
-            <a href="#" class="card-link">Card link</a>
-            <a href="#" class="card-link">Another link</a>
-          </div> -->
-        </div>
+      <div
+        class="container products d-flex justify-content-center flex-wrap gap-3"
+      >
+        <!-- Card product -->
       </div>
     </section>
 
@@ -208,11 +119,15 @@
         </div>
         <hr class="mt-0" />
 
-        <div
-          class="offcanvas-body d-flex flex-column justify-content-center m-auto"
-        >
-          <h5>YOUR CART IS EMPTY</h5>
+        <div class="offcanvas-body">
+          <div class="cart-items">
+            <!-- render cart items here -->
+          </div>
         </div>
+        <div class="offcanvas-bottom subtotal">
+          <!-- render subtotal here -->
+        </div>
+        <div class="offcanvas-bottom checkOut"></div>
       </div>
     </section>
 
@@ -327,5 +242,9 @@
         </div>
       </div>
     </footer>
+    <!-- JS -->
+
+    <script src="products.js"></script>
+    <script src="script.js"></script>
   </body>
 </html>

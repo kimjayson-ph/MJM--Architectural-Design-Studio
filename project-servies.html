@@ -22,12 +22,15 @@
     />
     <!-- CSS -->
     <link rel="stylesheet" href="project-services.css" />
+
     <title>Project-Services</title>
   </head>
   <body>
     <!-- Navbar -->
     <section>
-      <nav class="navbar fixed-top navbar-expand-md navbar-dark p-md-3">
+      <nav
+        class="navbar fixed-top navbar-expand-md navbar-dark p-md-3 BgColour"
+      >
         <div class="container-fluid">
           <!-- LOGO -->
           <a class="navbar-brand text-black text-bold" href="#"
@@ -385,6 +388,19 @@
         }
         prevScrollpos = currentScrollPos;
       };
+
+      // change navbar color when scroll down
+      function scrollValue() {
+        var navbar = document.getElementById("navbar");
+        var scroll = window.scrollY;
+        if (scroll > 150) {
+          navbar.classList.remove("BgColour");
+        } else {
+          navbar.classList.add("BgColour");
+        }
+      }
+
+      window.addEventListener("scroll", scrollValue);
     </script>
   </body>
 </html>
