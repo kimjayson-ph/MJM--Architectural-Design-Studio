@@ -48,49 +48,33 @@ nav {
 }
 
 /* landing page */
-.bg-image {
-  background-image: url("main_assets/main_landing.jpg");
-  background-size: cover;
+.mainLandContent{
+  margin-top:5%;
+  background:#EFEAD8;
+  height:950px;
 }
 
-.bg-blur {
-  width: 600px;
-  height: 380px;
-  position: absolute;
-  background-color: rgba(30, 30, 30, 0.3);
-  backdrop-filter: blur(0.5px);
-  /* box-shadow: 4px 4px 5px 0px rgba(0, 0, 0, 0.74);
-  -webkit-box-shadow: 4px 4px 5px 0px rgba(0, 0, 0, 0.74);
-  -moz-box-shadow: 4px 4px 5px 0px rgba(0, 0, 0, 0.74); */
+.mcontent{
+  margin-top:40%;
+  padding: 10%;
 }
 
-.content {
-  z-index: 1;
+.digiLandContent{
+  background:#EFEAD8;
+  height:950px;
 }
 
-/* about-projects-services */
-#mainAbout{
-background-color: #EFEAD8;
-}
+.vidd{
+  margin-top:10%;
+  height:950px;
 
-.aboutContent{
-padding:10rem;
 }
-
-/* digital products */
-#mainDigital{
-  background-color: #EFEAD8;
-}
-
-.digitalContent{
-  padding:10rem;
-  }
 
 /* footer */
 #mainFooter {
   background: #285430;
-  margin-top: 5rem;
   color:white;
+  padding-top:3rem;
 }
 
 #mainFooter p{
