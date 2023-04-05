@@ -1,70 +1,135 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- CDN -->
     <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css"
       rel="stylesheet"
-      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp"
       crossorigin="anonymous"
     />
     <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N"
       crossorigin="anonymous"
     ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css"
+    />
+    <!-- CSS -->
+    <link rel="stylesheet" href="commissions-style.css" />
+    
+    <title>MJM Design Studio</title>
 
-    <link rel="stylesheet" href="style.css" />
 
-    <title>Commissions</title>
-  </head>
-  <body>
-    <!-- Navbar  -->
-    <nav class="navbar sticky-top navbar-expand-md navbar-dark p-md-3">
-      <div class="container-fluid">
-        <!-- LOGO -->
-        <a class="navbar-brand text-black text-bold" href="#"
-          ><img class="logo" src="images/logo.png" alt="logo"
-        /></a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-          aria-controls="navbarNav"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <!-- Navbar Menu -->
-        <div
-          class="collapse navbar-collapse justify-content-end"
-          id="navbarNav"
-        >
-          <ul class="navbar-nav">
-            <li class="nav-item">
-              <a class="nav-link px-3 textc" href="index.html">HOME</a>
-            </li>
-            <li class="nav-item px-1">
-              <a class="nav-link text-color" href="#">SERVICES</a>
-            </li>
-            <li class="nav-item px-1">
-              <a class="nav-link text-color" href="#">PRODUCTS</a>
-            </li>
+    <!-- favicon -->
+    <link rel="icon" href="favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    
+</head>
+<body>
+    <!-- navabar -->
+    <section>
+      <nav class="navbar fixed-top navbar-expand-md navbar-dark p-md-3">
+        <div class="container-fluid">
+          <!-- LOGO -->
+          <a class="navbar-brand text-black text-bold" href="index.html"
+            ><img class="logo" src="images/logo.png" alt="logo"
+          /></a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon bg-success"></span>
+          </button>
 
-            <li class="nav-item px-1">
-              <a class="nav-link text-color" href="#">ABOUT</a>
-            </li>
-            <li class="nav-item">
-              <a class="btn btncolor rounded-3" href="#">ADD TO CART</a>
-            </li>
-          </ul>
+          <!-- Navbar Menu -->
+          <div
+            class="collapse navbar-collapse justify-content-end"
+            id="navbarNav"
+          >
+            <ul class="navbar-nav">
+              <li class="nav-item position-relative">
+                <a class="nav-link px-1 text-black" href="index.html">HOME</a>
+              </li>
+              <li class="nav-item position-relative project-dropdown">
+                <a class="nav-link px-1 text-black" href="project-servies.html">PROJECTS</a>
+                <!-- Project dropdown -->
+                <div class="project-link">
+                  <ul class="">
+                    <li class="nav-item list-unstyled">
+                      <a class="nav-link text-black p-0" href="project1.html">Ginama Project</a>
+                    </li>
+                    <li class="nav-item list-unstyled">
+                      <a class="nav-link text-black p-0" href="project2.html">Nunez Project</a>
+                    </li>
+                    <li class="nav-item list-unstyled">
+                      <a class="nav-link text-black p-0" href="project3.html">Gingoog Residence</a>
+                    </li>
+                    <li class="nav-item list-unstyled">
+                      <a class="nav-link text-black p-0" href="project4.html">Coffeeshop Project</a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+
+              <li class="nav-item px-1 position-relative project-dropdown">
+                <a class="nav-link text-black" href="#">DIGITAL PRODUCTS</a>
+                <!-- Products dropdown -->
+                <div class="project-link">
+                  <ul class="">
+                    <li class="nav-item list-unstyled">
+                      <a class="nav-link text-black p-0" href="shop.html">Digital Planners</a>
+                    </li>
+                    <li class="nav-item list-unstyled">
+                      <a class="nav-link text-black p-0" href="illustrations.html">Illustrations</a>
+                    </li>
+                    <li class="nav-item list-unstyled">
+                      <a class="nav-link text-black p-0" href="commissions.html">Commissions</a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+
+              <li class="nav-item px-1 position-relative project-dropdown">
+                <a class="nav-link text-black" href="#">ABOUT</a>
+                <!-- About dropdown -->
+                <div class="project-link">
+                  <ul class="">
+                    <li class="nav-item list-unstyled">
+                      <a class="nav-link text-black p-0" href="project-servies.html">Who</a>
+                    </li>
+                    <li class="nav-item list-unstyled">
+                      <a class="nav-link text-black p-0" href="project-servies.html">Services</a>
+                    </li>
+                    <li class="nav-item list-unstyled">
+                      <a class="nav-link text-black p-0" href="project-servies.html">Contact</a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li class="nav-item">
+                <a class="btn btncolor" href="#">CONTACT ME</a>
+              </li>
+            </ul>
+          </div>
         </div>
-      </div>
-    </nav>
+      </nav>
+    </section>
+
     <!-- Commissions -->
     <section class="commi">
       <div class="text-center my-5">
@@ -119,98 +184,157 @@
         </div>
       </div>
     </section>
-
-    <!-- Footer -->
-
-    <footer class="bgfooter text-center text-lg-start mt-5">
+    <!-- footer -->
+    <section id="mainFooter">
       <div class="container-fluid p-4">
-        <div class="row d-flex justify-content-evenly">
-          <!-- Contact Details-->
-          <div class="col-lg-4 mb-4 mb-md-0">
-            <p class="">CONTACT</p>
-            <p class="m-0">1111 - 222 - 333</p>
-            <p class="m-0">ar.mjoenaren@gmail.com</p>
-            <p class="m-0">Brgy. Kausawagan</p>
-            <p class="m-0">Cagayan de Oro City</p>
-            <p>Misamis Oriental, 9000</p>
-            <!-- Social Media -->
-            <a class="btn btn-floating mt-2" href="#!" role="button"
-              ><img src="images/fbicon.png" alt="" />
-            </a>
-            <a class="btn btn-floating mt-2" href="#!" role="button"
-              ><img src="images/igicon.png" alt=""
-            /></a>
-            <a class="btn btn-floating mt-2" href="#!" role="button"
-              ><img src="images/Liicon.png" alt=""
-            /></a>
+          <div class="row d-flex justify-content">
+              <!-- contact details -->
+              <div class="contacts col-lg-4 mb-4 mb-md-0">
+                  <p class="">CONTACT</p>
+                  <p class="m-0">1111 - 222 - 333</p>
+                  <p class="m-0">ar.mjoenaren@gmail.com</p>
+                  <p class="m-0">Brgy. Kausawagan</p>
+                  <p class="m-0">Cagayan de Oro City</p>
+                  <p>Misamis Oriental, 9000</p>
+
+                  <!-- social media -->
+                  <div id="socialLinks">
+                    <a class="nav-link pinterest" href="https://www.pinterest.ph/mariejoenarenm/">
+                      <i class="bi bi-pinterest"></i>
+                    </a>
+  
+                    <a class="nav-link instagram" href="https://www.instagram.com/ar.mjnm_designs/">
+                      <i class="bi bi-instagram"></i>
+                    </a>
+  
+                    <a class="nav-link linkedin" href="https://www.linkedin.com/in/marie- joenaren-m-833101151/">
+                      <i class="bi bi-linkedin"></i>
+                    </a>
+  
+                    <a class="nav-link whatsapp" href="#">
+                      <i class="bi bi-whatsapp"></i>
+                    </a>
+
+                    <a class="nav-link youtube" href="https://www.youtube.com/channel/UCYPWdxnxQh6GrL1i4rXDdkg">
+                      <i class="bi bi-youtube"></i>
+                    </a>
+                  </div>
+
+                  <!-- index logo -->
+                  <div class="indexLogo">
+                      <img class="footerLogo" src="main_assets/mjm logo light.png" alt="mjm logo">
+                  </div>
+              </div>
+
+              <!-- quick links -->
+              <div class="qLinks col-lg-4 mb-4 mb-md-0">
+                  <p>LINKS</p>
+                  <ul class="list-unstyled">
+                      <li class="nav-item">
+                          <a class="nav-link" href="#"><p>about</p></a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link" href="#"><p>works</p></a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link" href="#"><p>services</p></a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link" href="shop.html"><p>digital products</p></a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link" href="#!"><p>payments</p></a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link" href="#!"><p>FAQs</p></a>
+                      </li>
+                  </ul>
+              </div>
+
+              <!-- newsletter -->
+              <div class="col-lg-4 mb-4 mb-md-0">
+                  <form action="">
+                    <p>NEWSLETTER</p>
+      
+                    <ul class="list-unstyled">
+                      <li>
+                        <p class="m-0">Subscribe to receive updates, access to</p>
+                        <p class="mt-0">promo codes, and more!</p>
+                      </li>
+      
+                      <li class="mb-3">
+                        <input
+                          class="p-2 w-75 rounded-3"
+                          type="email"
+                          placeholder="enter your email"
+                        />
+                      </li>
+                      <li>
+                        <button type="submit" class="btn btncolor w-75">
+                          SUBSCRIBE
+                        </button>
+                      </li>
+                    </ul>
+                  </form>
+
+                  <!-- terms and policies -->
+                  <div class="termsAndPolicies">
+                      <ul class="list-unstyled">
+                          <li class="nav-item">
+                              <a class="nav-link" href="#">
+                                  Terms and Conditions
+                              </a>
+                          </li>
+                         <li class="nav-item">
+                              <a class="nav-link policy" href="#">
+                                  Privacy Policies
+                              </a>
+                         </li>
+                      </ul>
+                  </div>
+                </div>
           </div>
-
-          <!-- Quick links 1-->
-          <div class="col-lg-4 mb-4 mb-md-0">
-            <p>LINKS</p>
-
-            <ul class="list-unstyled">
-              <li>
-                <a class="btn text-white p-0" href="#!">about</a>
-              </li>
-              <li>
-                <a class="btn text-white p-0" href="#!">works</a>
-              </li>
-              <li>
-                <a class="btn text-white p-0" href="#!">services</a>
-              </li>
-              <li>
-                <a class="btn text-white p-0" href="#!">digital products</a>
-              </li>
-              <li>
-                <a class="btn text-white p-0" href="#!">payments</a>
-              </li>
-              <li>
-                <a class="btn text-white p-0" href="#!">F A Q s</a>
-              </li>
-            </ul>
-          </div>
-
-          <!-- column News letter -->
-          <div class="col-lg-4 mb-4 mb-md-0">
-            <form action="">
-              <p>NEWSLETTER</p>
-
-              <ul class="list-unstyled">
-                <li>
-                  <p class="m-0">Subscribe to receive updates, access to</p>
-                  <p class="mt-0">promo codes, and more</p>
-                </li>
-
-                <li class="mb-3">
-                  <input
-                    class="p-2 w-75 rounded-3"
-                    type="email"
-                    placeholder="enter your email"
-                  />
-                </li>
-                <li>
-                  <button type="submit" class="btn btncolor w-75">
-                    SUBSCRIBE
-                  </button>
-                </li>
-              </ul>
-            </form>
-          </div>
-        </div>
-        <!-- Footer Logo -->
-        <div class="d-flex justify-content-between">
-          <div>
-            <a class="btn mt-5" href="#" role="button"
-              ><img src="images/footerlogo.png" alt=""
-            /></a>
-          </div>
-
-          <div class="">
-            <p class="tnc">TERMS & CONDITIONS | PRIVACY POLICY</p>
-          </div>
-        </div>
       </div>
-    </footer>
-  </body>
+  </section>
+
+    <!-- JS -->
+    <script>
+      // Validation
+      (() => {
+        "use strict";
+
+        // Fetch all the forms we want to apply custom Bootstrap validation styles to
+        const forms = document.querySelectorAll(".needs-validation");
+
+        // Loop over them and prevent submission
+        Array.from(forms).forEach((form) => {
+          form.addEventListener(
+            "submit",
+            (event) => {
+              if (!form.checkValidity()) {
+                event.preventDefault();
+                event.stopPropagation();
+              }
+
+              form.classList.add("was-validated");
+            },
+            false
+          );
+        });
+      })();
+
+      // navbar show when scroll up
+      var prevScrollpos = window.pageYOffset;
+
+      window.onscroll = function () {
+        var currentScrollPos = window.pageYOffset;
+        if (prevScrollpos > currentScrollPos) {
+          document.querySelector("nav").style.top = "0";
+        } else {
+          document.querySelector("nav").style.top = "-7.2rem";
+        }
+        prevScrollpos = currentScrollPos;
+      };
+    </script>
+</body>
 </html>
