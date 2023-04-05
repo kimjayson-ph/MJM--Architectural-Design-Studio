@@ -92,6 +92,8 @@ const productsEl = document.querySelector(".products");
 const cartItemsEl = document.querySelector(".cart-items");
 const subtotalEl = document.querySelector(".subtotal");
 const totalItemsInCartEl = document.querySelector(".total-items-in-cart");
+const checkOut = document.querySelector(".checkOut");
+const cartEmpty = document.querySelector(".cartEmpty");
 
 // RENDER PRODUCTS
 function renderProdcuts() {
@@ -99,12 +101,13 @@ function renderProdcuts() {
     productsEl.innerHTML += `
     <div class="card" style="width: 345px; height: 345px">
         <p>${product.name}</p>
-        <p>$${product.price}</p>
+        <p>&#8369;${product.price}</p>
         <p>${product.description}</p>
         <div class="add-to-cart" onclick="addToCart(${product.id})">
         <button>Add to Cart</button>
         </div>
      </div>
+     
         `;
   });
 }
@@ -139,7 +142,7 @@ function updateCart() {
   // save cart to local storage
   localStorage.setItem("CART", JSON.stringify(cart));
 }
-const checkOut = document.querySelector(".checkOut");
+
 // calculate and render subtotal
 function renderSubtotal() {
   let totalPrice = 0,
@@ -150,9 +153,9 @@ function renderSubtotal() {
     totalItems += item.numberOfUnits;
   });
 
-  subtotalEl.innerHTML = `Subtotal (${totalItems} items): $${totalPrice.toFixed(
+  subtotalEl.innerHTML = `<p> Subtotal (${totalItems} items):&#8369;${totalPrice.toFixed(
     2
-  )}`;
+  )}</p> `;
 
   totalItemsInCartEl.innerHTML = totalItems;
 }
@@ -168,7 +171,7 @@ function renderCartItems() {
                 <h4>${item.name}</h4>
             </div>
             <div class="unit-price">
-                <small>$</small>${item.price}
+                <small>&#8369</small>${item.price}
             </div>
             <div class="units">
                 <div class="btn minus" onclick="changeNumberOfUnits('minus', ${item.id})">-</div>
@@ -177,16 +180,21 @@ function renderCartItems() {
             </div>
             <div class="item-info" onclick="removeItemFromCart(${item.id})">
            <button>Remove</button>
-        </div>
+            </div>
         </div>
         
+        
       `;
+    cartEmpty.innerHTML = ``;
+    checkOut.innerHTML = `<a class="btn btncolor w-100 text-center text-space"  href="checkout.html">CHECKOUT</a>`;
   });
 }
 
 // remove item from cart
 function removeItemFromCart(id) {
   cart = cart.filter((item) => item.id !== id);
+  checkOut.innerHTML = ``;
+  cartEmpty.innerHTML = `<p>YOUR CART IS EMPTY</p>`;
 
   updateCart();
 }
