@@ -100,6 +100,7 @@ function renderProdcuts() {
   products.forEach((product) => {
     productsEl.innerHTML += `
     <div class="card" style="width: 345px; height: 345px">
+    <img style="width:200px;height: 150px" src="${product.imgSrc}" alt="${product.name}">
         <p>${product.name}</p>
         <p>&#8369;${product.price}</p>
         <p>${product.description}</p>
@@ -153,9 +154,9 @@ function renderSubtotal() {
     totalItems += item.numberOfUnits;
   });
 
-  subtotalEl.innerHTML = `<p> Subtotal (${totalItems} items):&#8369;${totalPrice.toFixed(
+  subtotalEl.innerHTML = `<h5> Subtotal (${totalItems} items): &#8369;${totalPrice.toFixed(
     2
-  )}</p> `;
+  )}</h5> `;
 
   totalItemsInCartEl.innerHTML = totalItems;
 }
@@ -165,21 +166,23 @@ function renderCartItems() {
   cartItemsEl.innerHTML = ""; // clear cart element
   cart.forEach((item) => {
     cartItemsEl.innerHTML += `
-        <div class="cart-item">
-            <div class="item-info" >
-                <img src="${item.imgSrc}" alt="${item.name}">
+        <div class="cart-item row">
+            <div class="item-info col" >
+                <img style="width:200px;height: 150px" src="${item.imgSrc}" alt="${item.name}">
                 <h4>${item.name}</h4>
             </div>
-            <div class="unit-price">
+            <div class = "col">
+            <div class="unit-price mt-2">
                 <small>&#8369</small>${item.price}
             </div>
-            <div class="units">
-                <div class="btn minus" onclick="changeNumberOfUnits('minus', ${item.id})">-</div>
-                <div class="number">${item.numberOfUnits}</div>
+            <div class="units text-center d-inline-block m-2" style="border: 1px solid; width: 100px">
+                <div class="btn minus d-inline-block" onclick="changeNumberOfUnits('minus', ${item.id})">-</div>
+                <div class="number d-inline-block">${item.numberOfUnits}</div>
                 <div class="btn plus" onclick="changeNumberOfUnits('plus', ${item.id})">+</div>           
             </div>
-            <div class="item-info" onclick="removeItemFromCart(${item.id})">
-           <button>Remove</button>
+            <div class="item-info d-inline-block" onclick="removeItemFromCart(${item.id})">
+            <button type="button" class="btn btn-link text-black">REMOVE</button>
+            </div>
             </div>
         </div>
         

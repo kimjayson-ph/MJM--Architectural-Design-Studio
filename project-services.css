@@ -1,3 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,500;0,600;0,700;1,300&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Poppins;
+}
+
 .btncolor {
   background-color: #39a90fff !important;
   color: #ffff !important;
@@ -32,12 +41,26 @@
   position: absolute;
   top: 40px;
   display: none;
+  background-color:#EFEAD8;
 }
+
 .project-dropdown:hover .project-link {
   display: block;
 }
 
-.nav {
+.projecttab{
+  width:220px;
+}
+
+.digitab{
+  width:200px;
+}
+
+.abouttab{
+  width:150px;
+}
+
+nav {
   background-color: rgb(255, 255, 255);
   color: #000;
   position: fixed;
@@ -48,25 +71,24 @@
   z-index: 100;
 }
 
-.navbar {
-  color: white;
-  position: fixed;
-  padding: 30px 0;
-  right: 0;
-  left: 0;
-  background-color: transparent;
+.navbar-brand{
+  padding-left:10px;
 }
 
-.BgColour {
-  color: black;
-  transition: all 1s;
-  background-color: white;
+#navbarNav ul li{
+  margin:15px;
 }
 
 /* Project */
 .project-section {
   margin-top: 15%;
+  padding: 0 3rem 0 3rem;
 }
+
+h1{
+  font-weight:600 !important;
+}
+
 .cardp {
   width: 349px;
   height: 515px;
@@ -108,10 +130,126 @@
 
 /* Services */
 .services-section {
-  margin-top: 8%;
+  margin-top: 10%;
+  padding: 0 3rem 0 3rem;
 }
+
+.serv2{
+  margin:5rem 0 5rem 0;
+
+}
+
 
 /* About me */
 .about-section {
-  padding-bottom: 600px;
+  background-color:#EFEAD8;
 }
+
+.aboutRow{
+  padding:10rem;
+}
+
+.aboutContent{
+  font-size:20px;
+  padding-right:10rem;
+}
+
+.aboutContentMain{
+  margin-left:5rem;
+}
+.aboutContentMain h1{
+  font-size:72px;
+  font-weight:600;
+  padding-top:0;
+}
+.mariejoe{
+  width:500px;
+}
+
+.accordion-button{
+  background: #EFEAD8;
+}
+
+.accordion-item{
+  background: #EFEAD8;
+}
+
+/* contact */
+.contact-section h2{
+  font-weight:bold;
+  letter-spacing:.3em;
+}
+
+.socialMedia{
+  font-size:2rem;
+}
+
+
+.socialMedia a :hover{
+  color: #39a90fff;
+}
+
+/* footer */
+#mainFooter {
+  background: #285430;
+  margin-top: 5rem;
+  color:white;
+}
+
+#mainFooter p{
+  padding: 5px;
+}
+
+.contacts{
+  padding-left:2rem;
+}
+
+.footerLogo{
+  height:75px;
+}
+
+#socialLinks a{
+  font-size:2rem;
+  position:absolute;
+}
+
+#socialLinks a :hover{
+  color: #39a90fff;
+}
+
+.instagram{
+  margin-left:3rem;
+}
+
+.linkedin{
+  margin-left:6rem;
+}
+
+.whatsapp{
+  margin-left:9rem;
+}
+
+.youtube{
+  margin-left:12rem;
+}
+
+.indexLogo{
+  margin-top:100px;
+}
+
+.qLinks ul li a :hover{
+  color:#39a90fff;
+}
+
+.termsAndPolicies{
+  margin-top: 4rem;
+}
+
+.termsAndPolicies ul li a{
+  position:absolute;
+}
+
+.policy{
+  margin-left:200px;
+}
+

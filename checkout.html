@@ -274,7 +274,7 @@
           <div id="checkOutCart">
             <!-- render checkout cart items here -->
           </div>
-
+          <hr />
           <div id="subtotalEl">
             <!-- render total price -->
           </div>
@@ -294,7 +294,8 @@
         let html_temp = "";
         cartData.forEach((data) => {
           html_temp += `<div>
-            <p>${data.name}</p>
+            <img style="width:200px;height: 200px" src="${data.imgSrc}" alt="${data.name}">
+             <h4>${data.name}</h4>
             <p>Price: &#8369;${data.price}</p>
             <p>details:${data.description}</p>
             <p>Quantity: ${data.numberOfUnits} </p>
@@ -314,7 +315,9 @@
           totalItems += item.numberOfUnits;
         });
 
-        subtotalEl.innerHTML = `<p>Total Quantity: ${totalItems} Total Price: &#8369;${totalPrice} </p>`;
+        subtotalEl.innerHTML = `<h5>Total Quantity: ${totalItems} Total Price: &#8369;${totalPrice.toFixed(
+          2
+        )} </h5>`;
       }
 
       if (cartData.length !== 0) {

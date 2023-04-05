@@ -6,7 +6,7 @@ const products = [
     instock: 20,
     description:
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores, error.",
-    imgSrc: "./img/t1.png",
+    imgSrc: "./main_assets/sample products.jpg",
   },
   {
     id: 1,
@@ -15,7 +15,7 @@ const products = [
     instock: 20,
     description:
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores, error.",
-    imgSrc: "./img/t2.png",
+    imgSrc: "./main_assets/digital-planner.jpg",
   },
   {
     id: 2,
@@ -24,7 +24,7 @@ const products = [
     instock: 20,
     description:
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores, error.",
-    imgSrc: "./img/t3.png",
+    imgSrc: "./main_assets/sample products.jpg",
   },
   {
     id: 3,
@@ -33,7 +33,7 @@ const products = [
     instock: 20,
     description:
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores, error.",
-    imgSrc: "./img/t3.png",
+    imgSrc: "./main_assets/digital-planner.jpg",
   },
   {
     id: 4,
@@ -42,7 +42,7 @@ const products = [
     instock: 20,
     description:
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores, error.",
-    imgSrc: "./img/t3.png",
+    imgSrc: "./main_assets/sample products.jpg",
   },
   {
     id: 5,
@@ -51,6 +51,6 @@ const products = [
     instock: 20,
     description:
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores, error.",
-    imgSrc: "./img/t3.png",
+    imgSrc: "./main_assets/digital-planner.jpg",
   },
 ];

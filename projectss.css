@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,500;0,600;0,700;1,300&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Poppins;
+}
+
+/* Navbar */
+.project-link {
+  position: absolute;
+  top: 40px;
+  display: none;
+  background-color:#EFEAD8;
+}
+
+.project-dropdown:hover .project-link {
+  display: block;
+}
+
+.projecttab{
+  width:220px;
+}
+
+.digitab{
+  width:200px;
+}
+
+.abouttab{
+  width:150px;
+}
+
+nav {
+  background-color: rgb(255, 255, 255);
+  color: #000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  transition: top 0.2s ease-in-out;
+  z-index: 100;
+}
+
+.navbar-brand{
+  padding-left:10px;
+}
+
+#navbarNav ul li{
+  margin:15px;
+}
+
+.btncolor {
+    background-color: #39a90fff !important;
+    color: #ffff !important;
+    fill: solid !important;
+}
+
+.project-section{
+    margin-top: 15%;
+    padding: 0 3rem 0 3rem;
+}
+
+.project-details{
+    margin-top:5%;
+}
+
+.accordion-button{
+    background: #EFEAD8;
+  }
+  
+  .accordion-item{
+    background: #EFEAD8;
+  }
+
+  /* gallery */
+  .gallery{
+    margin-top:5%;
+    padding:3rem;
+  }
+
+  .gallery img{
+    width:100%;
+  }
+
+  /* footer */
+#mainFooter {
+    background: #285430;
+    margin-top: 5rem;
+    color:white;
+  }
+  
+  #mainFooter p{
+    padding: 5px;
+  }
+  
+  .contacts{
+    padding-left:2rem;
+  }
+  
+  .footerLogo{
+    height:75px;
+  }
+  
+  #socialLinks a{
+    font-size:2rem;
+    position:absolute;
+  }
+  
+  #socialLinks a :hover{
+    color: #39a90fff;
+  }
+  
+  .instagram{
+    margin-left:3rem;
+  }
+  
+  .linkedin{
+    margin-left:6rem;
+  }
+  
+  .whatsapp{
+    margin-left:9rem;
+  }
+  
+  .youtube{
+    margin-left:12rem;
+  }
+  
+  .indexLogo{
+    margin-top:100px;
+  }
+  
+  .qLinks ul li a :hover{
+    color:#39a90fff;
+  }
+  
+  .termsAndPolicies{
+    margin-top: 4rem;
+  }
+  
+  .termsAndPolicies ul li a{
+    position:absolute;
+  }
+  
+  .policy{
+    margin-left:200px;
+  }
+  
