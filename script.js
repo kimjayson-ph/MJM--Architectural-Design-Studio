@@ -105,7 +105,9 @@ function renderProdcuts() {
         <p>&#8369;${product.price}</p>
         <p>${product.description}</p>
         <div class="add-to-cart" onclick="addToCart(${product.id})">
-        <button>Add to Cart</button>
+        <button  data-bs-toggle="offcanvas"
+        data-bs-target="#offcanvasRight"
+        aria-controls="offcanvasRight">Add to Cart</button>
         </div>
      </div>
      
