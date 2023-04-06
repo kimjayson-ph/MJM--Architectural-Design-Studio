@@ -113,7 +113,7 @@ const cartEmpty = document.querySelector(".cartEmpty");
 function renderProdcuts() {
   products.forEach((product) => {
     productsEl.innerHTML += `
-    <div class="card" style="width: 345px; height: 350px">
+    <div class="card rounded-0" style="width: 345px; height: 350px">
     <img style="width:343px;height: 200px" src="${product.imgSrc}" alt="${product.name}">
         <div>${product.name}</div>
         <p>&#8369;${product.price}</p>
@@ -182,13 +182,14 @@ function renderCartItems() {
   cartItemsEl.innerHTML = ""; // clear cart element
   cart.forEach((item) => {
     cartItemsEl.innerHTML += `
-        <div class="cart-item row">
+        <div class="cart-item row mb-3">
             <div class="item-info col" >
                 <img style="width:200px;height: 150px" src="${item.imgSrc}" alt="${item.name}">
-                <h5>${item.name}</h5>
+                
             </div>
             <div class = "col">
             <div class="unit-price mt-2">
+                <h5>${item.name}</h5>
                 <small>&#8369</small>${item.price}
             </div>
             <div class="units text-center d-inline-block m-2" style="border: 1px solid; width: 100px">
@@ -205,7 +206,7 @@ function renderCartItems() {
         
       `;
     cartEmpty.innerHTML = ``;
-    checkOut.innerHTML = `<a class="btn btncolor w-100 text-center text-space"  href="checkout.html">CHECKOUT</a>`;
+    checkOut.innerHTML = `<a class="btn btncolor w-100 text-center text-space rounded-0"  href="checkout.html">CHECKOUT</a>`;
   });
 }
 
