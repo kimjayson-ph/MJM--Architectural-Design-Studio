@@ -40,19 +40,27 @@ submitButton?.addEventListener("click", (e) => {
   localStorage.setItem("Password", pass);
   localStorage.setItem("Cpassword", cpass);
   if (fname == "" && lname == "" && email == "" && pass == "") {
-    errorbox.innerHTML = "input field has no value!";
+    errorbox.innerHTML = `<div class="alert alert-danger" role="alert">
+    Input field has no value!
+  </div>`;
   } else {
     if (pass.length >= 6 && pass.length <= 20) {
       if (pass !== cpass) {
-        errorbox.innerHTML = "Password not matching!";
+        errorbox.innerHTML = `<div class="alert alert-danger" role="alert">
+        Password not matching!
+      </div>`;
       } else {
-        alert("Register successful!");
+        errorbox.innerHTML = `<div class="alert alert-success" role="alert">
+        Register successful!
+      </div>`;
         setTimeout(() => {
           location.href = "Login-page.html";
-        }, 1000);
+        }, 1500);
       }
     } else {
-      errorbox.innerHTML = "Input min six digit password!";
+      errorbox.innerHTML = `<div class="alert alert-danger" role="alert">
+      Input min six digit password!
+    </div>`;
     }
   }
 });
@@ -72,15 +80,21 @@ loginButton?.addEventListener("click", (e) => {
   const Password = localStorage.getItem("Password");
 
   if (emailAddress == "" && passWord == "") {
-    errorbox.innerHTML = "input field has no value!";
+    errorbox.innerHTML = `<div class="alert alert-danger" role="alert">
+    Input field has no value!
+  </div>`;
   } else {
     if (emailAddress == Email && passWord == Password) {
-      alert("login successful!");
+      errorbox.innerHTML = `<div class="alert alert-success" role="alert">
+      Login successful!
+    </div>`;
       setTimeout(() => {
         location.href = "index.html";
-      }, 1000);
+      }, 1500);
     } else {
-      errorbox.innerHTML = "email and password wrong!";
+      errorbox.innerHTML = `<div class="alert alert-danger" role="alert">
+      Email and Password wrong!
+    </div>`;
     }
   }
 });
