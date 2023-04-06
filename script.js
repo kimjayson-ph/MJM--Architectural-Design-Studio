@@ -113,13 +113,13 @@ const cartEmpty = document.querySelector(".cartEmpty");
 function renderProdcuts() {
   products.forEach((product) => {
     productsEl.innerHTML += `
-    <div class="card" style="width: 345px; height: 345px">
-    <img style="width:200px;height: 150px" src="${product.imgSrc}" alt="${product.name}">
-        <p>${product.name}</p>
+    <div class="card" style="width: 345px; height: 350px">
+    <img style="width:343px;height: 200px" src="${product.imgSrc}" alt="${product.name}">
+        <div>${product.name}</div>
         <p>&#8369;${product.price}</p>
-        <p>${product.description}</p>
+        <div>${product.description}</div>
         <div class="add-to-cart" onclick="addToCart(${product.id})">
-        <button  data-bs-toggle="offcanvas"
+        <button class ="btn btncolor rounded-0"  data-bs-toggle="offcanvas"
         data-bs-target="#offcanvasRight"
         aria-controls="offcanvasRight">Add to Cart</button>
         </div>
@@ -185,7 +185,7 @@ function renderCartItems() {
         <div class="cart-item row">
             <div class="item-info col" >
                 <img style="width:200px;height: 150px" src="${item.imgSrc}" alt="${item.name}">
-                <h4>${item.name}</h4>
+                <h5>${item.name}</h5>
             </div>
             <div class = "col">
             <div class="unit-price mt-2">
