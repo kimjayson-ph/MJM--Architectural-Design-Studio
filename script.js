@@ -176,6 +176,10 @@ function renderSubtotal() {
 
   totalItemsInCartEl.innerHTML = totalItems;
 }
+if (cart.length === 0) {
+  subtotalEl.innerHTML = "";
+  cartEmpty.innerHTML = `<p>YOUR CART IS EMPTY</p>`;
+}
 
 // render cart items
 function renderCartItems() {
