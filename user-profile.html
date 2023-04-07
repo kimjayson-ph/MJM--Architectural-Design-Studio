@@ -228,7 +228,133 @@
           <p>Email:</p>
           <p>Address:</p>
         </div>
-        <div><button class="btn btncolor rounded-0">EDIT ADDRESS</button></div>
+        <div>
+          <button
+            class="btn btncolor rounded-0"
+            data-bs-toggle="modal"
+            data-bs-target="#exampleModal"
+          >
+            EDIT ADDRESS
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Modal form -->
+    <div class="modal" id="exampleModal" tabindex="-1">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Edit Address</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <!-- Modal form -->
+            <form action="" class="login-form needs-validation" novalidate>
+              <div class="form-floating mb-3">
+                <input
+                  type="text"
+                  class="form-control rounded-0"
+                  id="fname"
+                  placeholder="First name"
+                  required
+                />
+                <label for="floatingInputfname">First name</label>
+              </div>
+              <div class="form-floating mb-3">
+                <input
+                  type="text"
+                  class="form-control rounded-0"
+                  id="lname"
+                  placeholder="Last name"
+                  required
+                />
+                <label for="floatingInputlastname">Last name</label>
+              </div>
+              <div class="form-floating mb-3">
+                <input
+                  type="email"
+                  class="form-control rounded-0"
+                  id="email"
+                  placeholder="name@example.com"
+                  required
+                />
+                <label for="floatingInputemail">Email address</label>
+              </div>
+              <div class="form-floating mb-3">
+                <input
+                  type="text"
+                  class="form-control rounded-0"
+                  id="pass"
+                  placeholder="Address"
+                  required
+                />
+                <label for="floatingAddress">Address</label>
+              </div>
+
+              <div class="d-grid">
+                <button
+                  class="btn btncolor mb-3 buttonregister rounded-0"
+                  type="submit"
+                >
+                  ADD A NEW ADDRESS
+                </button>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Add to cart -->
+    <section>
+      <div
+        class="offcanvas offcanvas-end"
+        tabindex="-1"
+        id="offcanvasRight"
+        aria-labelledby="offcanvasRightLabel"
+      >
+        <div class="offcanvas-header">
+          <h3 class="offcanvas-title" id="offcanvasRightLabel">CART</h3>
+
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="offcanvas"
+            aria-label="Close"
+          ></button>
+        </div>
+        <hr class="mt-0" />
+
+        <div class="offcanvas-body">
+          <div class="cart-items">
+            <!-- render cart items here -->
+          </div>
+          <div class="cartEmpty text-center">
+            <!-- render cartEmpty text here -->
+          </div>
+        </div>
+        <hr />
+        <div class="offcanvas-bottom subtotal">
+          <!-- render subtotal here -->
+        </div>
+        <div class="offcanvas-bottom checkOut">
+          <!-- render checkout button here -->
+        </div>
       </div>
     </section>
 
@@ -371,6 +497,33 @@
         }
         prevScrollpos = currentScrollPos;
       };
+
+      // Validation
+      (() => {
+        "use strict";
+
+        // Fetch all the forms we want to apply custom Bootstrap validation styles to
+        const forms = document.querySelectorAll(".needs-validation");
+
+        // Loop over them and prevent submission
+        Array.from(forms).forEach((form) => {
+          form.addEventListener(
+            "submit",
+            (event) => {
+              if (!form.checkValidity()) {
+                event.preventDefault();
+                event.stopPropagation();
+              }
+
+              form.classList.add("was-validated");
+            },
+            false
+          );
+        });
+      })();
     </script>
+
+    <script src="products.js"></script>
+    <script src="user-profile.js"></script>
   </body>
 </html>
