@@ -181,44 +181,54 @@
 
     <!-- Login -->
     <section>
-      <div class="container d-flex justify-content-center loginContainer">
-        <div class="my-5 py-5">
-          <h3 class="text-center mb-4">LOGIN</h3>
-          <p class="mb-4 text-center">Please enter your e-mail and password:</p>
+      <div class="bg-container">
+        <div class="container d-flex justify-content-center loginContainer">
+          <div class="my-5 py-5">
+            <h3 class="text-center mb-4">LOGIN</h3>
+            <p class="mb-4 text-center">
+              Please enter your e-mail and password:
+            </p>
 
-          <div id="errorbox"></div>
-          <form action="" class="login-form needs-validation" novalidate>
-            <input
-              class="form-control rounded-0 mb-3"
-              id="emailAddress"
-              type="email"
-              placeholder="Email"
-              required
-            />
+            <div id="errorbox"></div>
+            <form action="" class="login-form needs-validation" novalidate>
+              <div class="form-floating mb-3">
+                <input
+                  type="email"
+                  class="form-control rounded-0"
+                  id="emailAddress"
+                  placeholder="name@example.com"
+                  required
+                />
+                <label for="floatingInputemail">Email address</label>
+              </div>
 
-            <input
-              class="form-control rounded-0 mb-3"
-              id="passWord"
-              type="password"
-              placeholder="Password"
-              required
-            />
+              <div class="form-floating mb-3">
+                <input
+                  type="password"
+                  class="form-control rounded-0"
+                  id="passWord"
+                  placeholder="Password"
+                  required
+                />
+                <label for="floatingPassword">Password</label>
+              </div>
 
-            <div class="d-grid">
-              <button class="btn btncolor rounded-0 mb-3 loginbutton">
-                LOGIN
-              </button>
-            </div>
-          </form>
+              <div class="d-grid">
+                <button class="btn btncolor rounded-0 mb-3 loginbutton">
+                  LOGIN
+                </button>
+              </div>
+            </form>
 
-          <p class="text-center">
-            Don't have an account?
-            <a
-              class="btn btn-link text-decoration-none"
-              href="register-page.html"
-              >Create one</a
-            >
-          </p>
+            <p class="text-center">
+              Don't have an account?
+              <a
+                class="btn btn-link text-decoration-none"
+                href="register-page.html"
+                >Create one</a
+              >
+            </p>
+          </div>
         </div>
       </div>
     </section>

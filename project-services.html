@@ -532,6 +532,7 @@
       <div class="text-center my-5">
         <h2 class="my-4">CONTACT</h2>
         <p class="mb-0">ar.mjoenaren@gmail.com</p>
+
         <p class="m-0">Brgy Kausawagan</p>
         <p class="m-0">Cagayan de Oro City</p>
         <p class="mt-0">Misamis Oriental, 9000</p>
@@ -544,27 +545,29 @@
       </div>
 
       <div class="text-center mt-4">
-        <form class="needs-validation" novalidate action="">
-          <div>
+        <form class="needs-validation" novalidate>
+          <div class="d-flex justify-content-center">
             <input
-              class="iemail2 p-2 rounded-0"
+              class="form-control iemail2 p-2 rounded-0"
               type="text"
               placeholder="enter your name"
+              id="Name"
               required
             />
             <input
-              class="iemail2 p-2 rounded-0"
+              class="form-control iemail2 p-2 rounded-0"
               type="email"
               placeholder="enter your email"
+              id="eMail"
               required
             />
           </div>
-          <div>
+          <div class="d-flex justify-content-center">
             <textarea
-              class="iemail3 p-2 mt-3 rounded-0"
+              class="form-control iemail3 p-2 mt-3 rounded-0"
               placeholder="enter your message"
               name=""
-              id=""
+              id="textArea"
               required
             ></textarea>
           </div>
@@ -760,6 +763,18 @@
         }
         prevScrollpos = currentScrollPos;
       };
+
+      // Toast alert
+      const toastTrigger = document.getElementById("liveToastBtn");
+      const toastLiveExample = document.getElementById("liveToast");
+
+      if (toastTrigger) {
+        const toastBootstrap =
+          bootstrap.Toast.getOrCreateInstance(toastLiveExample);
+        toastTrigger.addEventListener("click", () => {
+          toastBootstrap.show();
+        });
+      }
     </script>
   </body>
 </html>

@@ -179,79 +179,85 @@
 
     <!-- Register -->
     <section>
-      <div class="container d-flex justify-content-center loginContainer">
-        <div class="my-5 py-4">
-          <h3 class="text-center mb-4">REGISTER</h3>
-          <p class="mb-4 text-center">Please fill in the information below:</p>
-          <div class="bg-danger"><p id="errorbox"></p></div>
-          <form action="" class="login-form needs-validation" novalidate>
-            <div class="form-floating mb-3">
-              <input
-                type="text"
-                class="form-control rounded-0"
-                id="fname"
-                placeholder="First name"
-                required
-              />
-              <label for="floatingInputfname">First name</label>
-            </div>
-            <div class="form-floating mb-3">
-              <input
-                type="text"
-                class="form-control rounded-0"
-                id="lname"
-                placeholder="Last name"
-                required
-              />
-              <label for="floatingInputlastname">Last name</label>
-            </div>
-            <div class="form-floating mb-3">
-              <input
-                type="email"
-                class="form-control rounded-0"
-                id="email"
-                placeholder="name@example.com"
-                required
-              />
-              <label for="floatingInputemail">Email address</label>
-            </div>
-            <div class="form-floating mb-3">
-              <input
-                type="password"
-                class="form-control rounded-0"
-                id="pass"
-                placeholder="Password"
-                required
-              />
-              <label for="floatingPassword">Password</label>
-            </div>
-            <div class="form-floating mb-3">
-              <input
-                type="password"
-                class="form-control rounded-0"
-                id="cpass"
-                placeholder="Confirm Password"
-                required
-              />
-              <label for="floatingPassword">Confirm Password</label>
-            </div>
+      <div class="bg-container">
+        <div class="container d-flex justify-content-center loginContainer">
+          <div class="m-5">
+            <h3 class="text-center mb-4">REGISTER</h3>
+            <p class="mb-4 text-center">
+              Please fill in the information below:
+            </p>
+            <div class="bg-danger"><p id="errorbox"></p></div>
+            <form action="" class="login-form needs-validation" novalidate>
+              <div class="form-floating mb-3">
+                <input
+                  type="text"
+                  class="form-control rounded-0"
+                  id="fname"
+                  placeholder="First name"
+                  required
+                />
+                <label for="floatingInputfname">First name</label>
+              </div>
+              <div class="form-floating mb-3">
+                <input
+                  type="text"
+                  class="form-control rounded-0"
+                  id="lname"
+                  placeholder="Last name"
+                  required
+                />
+                <label for="floatingInputlastname">Last name</label>
+              </div>
+              <div class="form-floating mb-3">
+                <input
+                  type="email"
+                  class="form-control rounded-0"
+                  id="email"
+                  placeholder="name@example.com"
+                  required
+                />
+                <label for="floatingInputemail">Email address</label>
+              </div>
+              <div class="form-floating mb-3">
+                <input
+                  type="password"
+                  class="form-control rounded-0"
+                  id="pass"
+                  placeholder="Password"
+                  required
+                />
+                <label for="floatingPassword">Password</label>
+              </div>
+              <div class="form-floating mb-3">
+                <input
+                  type="password"
+                  class="form-control rounded-0"
+                  id="cpass"
+                  placeholder="Confirm Password"
+                  required
+                />
+                <label for="floatingPassword">Confirm Password</label>
+              </div>
 
-            <div class="d-grid">
-              <button
-                class="btn btncolor mb-3 buttonregister rounded-0"
-                type="submit"
+              <div class="d-grid">
+                <button
+                  class="btn btncolor mb-3 buttonregister rounded-0"
+                  type="submit"
+                >
+                  CREATE MY ACCOUNT
+                </button>
+              </div>
+            </form>
+
+            <p class="text-center">
+              Already have an account?
+              <a
+                class="btn btn-link text-decoration-none"
+                href="Login-page.html"
+                >Login</a
               >
-                CREATE MY ACCOUNT
-              </button>
-            </div>
-          </form>
-
-          <p class="text-center">
-            Already have an account?
-            <a class="btn btn-link text-decoration-none" href="Login-page.html"
-              >Login</a
-            >
-          </p>
+            </p>
+          </div>
         </div>
       </div>
     </section>

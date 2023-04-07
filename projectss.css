@@ -7,6 +7,9 @@
   font-family: Poppins;
 }
 
+html {
+  scroll-behavior: smooth;
+}
 /* Navbar */
 .project-link {
   position: absolute;
