@@ -256,3 +256,20 @@ h1 {
 .policy {
   margin-left: 200px;
 }
+
+/* LOGIN PAGE */
+.login-form {
+  width: 400px;
+}
+
+.loginContainer {
+  margin-top: 9%;
+  margin-bottom: 5%;
+}
+
+.bg-container {
+  background-color: #efead8;
+  width: 35%;
+  margin: 0 auto;
+  margin-top: 8%;
+}

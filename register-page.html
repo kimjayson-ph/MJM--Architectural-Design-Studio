@@ -177,7 +177,13 @@
                 </div>
               </li>
               <li class="nav-item">
-                <a class="btn btncolor rounded-0" href="#">CONTACT ME</a>
+                <a
+                  class="btn btncolor rounded-0"
+                  href="#"
+                  data-bs-toggle="modal"
+                  data-bs-target="#exampleModal"
+                  >CONTACT ME</a
+                >
               </li>
             </ul>
           </div>
@@ -265,6 +271,90 @@
                 >Login</a
               >
             </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Modal for contact me -->
+    <section>
+      <div class="modal" id="exampleModal" tabindex="-1">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Get in Touch</h5>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <form action="" class="needs-validation" novalidate>
+                <div class="form-floating mb-3">
+                  <input
+                    type="text"
+                    class="form-control rounded-0"
+                    id="fname"
+                    placeholder="First name"
+                    required
+                  />
+                  <label for="floatingInputfname">Name</label>
+                </div>
+
+                <div class="form-floating mb-3">
+                  <input
+                    type="email"
+                    class="form-control rounded-0"
+                    id="email"
+                    placeholder="name@example.com"
+                    required
+                  />
+                  <label for="floatingInputemail">Email address</label>
+                </div>
+                <div class="form-floating mb-3">
+                  <input
+                    type="number"
+                    class="form-control rounded-0"
+                    id="phone"
+                    placeholder="Phone"
+                    required
+                  />
+                  <label for="floatingAddress">Phone</label>
+                </div>
+
+                <div class="form-floating mb-3">
+                  <textarea
+                    class="form-control"
+                    placeholder="Leave a comment here"
+                    id="floatingTextarea2"
+                    style="height: 100px"
+                    required
+                  ></textarea>
+                  <label for="floatingTextarea2">Comments</label>
+                </div>
+
+                <div class="d-grid">
+                  <button
+                    class="btn btncolor mb-3 buttonregister rounded-0"
+                    type="submit"
+                  >
+                    SEND
+                  </button>
+                </div>
+              </form>
+            </div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                style="background-color: #efead8"
+                class="btn text-black rounded-0"
+                data-bs-dismiss="modal"
+              >
+                Close
+              </button>
+            </div>
           </div>
         </div>
       </div>
