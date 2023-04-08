@@ -186,7 +186,7 @@
                 <a
                   class="btn text-uppercase"
                   id="userName"
-                  href="Login-page.html"
+                  href="user-profile.html"
                   >ACCOUNT</a
                 >
                 <!-- Account dropdown -->
@@ -539,7 +539,7 @@
 
       console.log(userData);
 
-      usernameDashboard.innerHTML = `${userData.firstName}`;
+      usernameDashboard.innerHTML = `<i class="bi bi-person-circle"></i> ${userData.firstName}`;
 
       logoutHandler.addEventListener("click", (e) => {
         e.preventDefault();
