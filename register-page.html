@@ -268,21 +268,12 @@
                 />
                 <label for="floatingPassword">Password</label>
               </div>
-              <div class="form-floating mb-3">
-                <input
-                  type="password"
-                  class="form-control rounded-0"
-                  id="cpass"
-                  placeholder="Confirm Password"
-                  required
-                />
-                <label for="floatingPassword">Confirm Password</label>
-              </div>
 
               <div class="d-grid">
                 <button
                   class="btn btncolor mb-3 buttonregister rounded-0"
                   type="submit"
+                  id="signupButton"
                 >
                   CREATE MY ACCOUNT
                 </button>
@@ -525,6 +516,76 @@
         }
         prevScrollpos = currentScrollPos;
       };
+
+      // Register Function
+
+      const firstName = document.getElementById("fname");
+      const lastName = document.getElementById("lname");
+      const email = document.getElementById("email");
+
+      const userPassword = document.getElementById("pass");
+      const signupHandler = document.getElementById("signupButton");
+      const userLocalStorage =
+        JSON.parse(localStorage.getItem("userInfo")) || [];
+
+      signupHandler.addEventListener("click", (e) => {
+        e.preventDefault();
+
+        let newUserInfo = [];
+        // console.log(firstName.value.length);
+        const validationResult = InputValidation();
+
+        if (validationResult === false) {
+          return;
+        }
+
+        const userInfo = {
+          firstName: firstName.value,
+          lastName: lastName.value,
+          email: email.value,
+
+          userPassword: userPassword.value,
+          isLoggedIn: false,
+        };
+
+        //EMAIL VALIDATION
+        isEmailExist = userLocalStorage.find(
+          (data) => data.email === email.value
+        );
+
+        if (!isEmailExist) {
+          if (userLocalStorage?.length !== 0) {
+            newUserInfo = [...userLocalStorage, { ...userInfo }]; // ARRAY PUSH
+          } else {
+            newUserInfo = [{ ...userInfo }];
+          }
+
+          localStorage.setItem("userInfo", JSON.stringify(newUserInfo));
+          errorbox.innerHTML = `<div class="alert alert-success" role="alert">
+        Register successful!
+      </div>`;
+          setTimeout(() => {
+            location.href = "Login-page.html";
+          }, 1500);
+        } else {
+          alert("Email already exist");
+        }
+      });
+
+      // VALIDATION FUNCTION
+      function InputValidation() {
+        if (firstName.value.length === 0) {
+          errorbox.innerHTML = `<div class="alert alert-danger" role="alert">
+		  Input field has no value!
+	   </div>`;
+          return false;
+        } else if (lastName.value.length === 0) {
+          errorbox.innerHTML = `<div class="alert alert-danger" role="alert">
+    Input field has no value!
+       </div>`;
+          return false;
+        }
+      }
     </script>
   </body>
 </html>

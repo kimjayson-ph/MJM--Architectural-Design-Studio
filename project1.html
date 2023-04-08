@@ -178,7 +178,12 @@
                 </div>
               </li>
               <li class="nav-item position-relative project-dropdown">
-                <a class="btn" href="Login-page.html">ACCOUNT</a>
+                <a
+                  class="btn text-uppercase"
+                  id="userName"
+                  href="user-profile.html"
+                  >ACCOUNT</a
+                >
                 <!-- Account dropdown -->
                 <div class="project-link">
                   <ul class="">
@@ -643,6 +648,36 @@
         }
         prevScrollpos = currentScrollPos;
       };
+
+      // usernameDashboard
+      const usernameDashboard = document.getElementById("userName");
+      const user = JSON.parse(localStorage.getItem("userInfo"));
+      const logoutHandler = document.getElementById("logoutHandler");
+      console.log(user);
+
+      let userData = user.find((data) => {
+        return data.isLoggedIn === true;
+      });
+
+      console.log(userData);
+
+      usernameDashboard.innerHTML = `${userData.firstName}`;
+
+      logoutHandler.addEventListener("click", (e) => {
+        e.preventDefault();
+
+        let newData = user.map((data) => {
+          if (data.isLoggedIn === true) {
+            return { ...userData, isLoggedIn: false };
+          } else {
+            return data;
+          }
+        });
+
+        localStorage.setItem("userInfo", JSON.stringify(newData));
+
+        window.location.href = "index.html";
+      });
     </script>
   </body>
 </html>

@@ -255,7 +255,10 @@
               </div>
 
               <div class="d-grid">
-                <button class="btn btncolor rounded-0 mb-3 loginbutton">
+                <button
+                  class="btn btncolor rounded-0 mb-3 loginbutton"
+                  id="loginButton"
+                >
                   LOGIN
                 </button>
               </div>
@@ -497,6 +500,54 @@
         }
         prevScrollpos = currentScrollPos;
       };
+
+      //Login Function
+      const loginHandler = document.getElementById("loginButton");
+      const emailAddress = document.getElementById("emailAddress");
+      const password = document.getElementById("passWord");
+      const user = JSON.parse(localStorage.getItem("userInfo"));
+      const usernameDashboard = document.getElementById("userName");
+
+      loginHandler.addEventListener("click", (e) => {
+        e.preventDefault();
+
+        const userData = user.find((data) => data.email === emailAddress.value);
+
+        if (userData) {
+          console.log(emailAddress.value, password.value);
+          if (
+            emailAddress.value === userData.email &&
+            password.value === userData.userPassword
+          ) {
+            // SET AUTHENTICATED USER TO LOGGED IN TRUE
+            let newData = user.map((data) => {
+              if (data.email === userData.email) {
+                return { ...userData, isLoggedIn: true };
+              } else {
+                return data;
+              }
+            });
+            // console.log(newData);
+            localStorage.setItem("userInfo", JSON.stringify(newData));
+            errorbox.innerHTML = `<div class="alert alert-success" role="alert">
+      Login successful!
+    </div>`;
+            setTimeout(() => {
+              location.href = "index.html";
+            }, 1200);
+          } else {
+            // FALLBACK FOR WRONG INPUT CREDENTIAL
+            errorbox.innerHTML = `<div class="alert alert-danger" role="alert">
+        Email or Password is invalid!
+        </div>`;
+          }
+        } else {
+          // FALLBACK FOR WRONG INPUT CREDENTIAL
+          errorbox.innerHTML = `<div class="alert alert-danger" role="alert">
+      Email or Password is invalid!
+    </div>`;
+        }
+      });
     </script>
   </body>
 </html>
