@@ -200,6 +200,10 @@
                 <!-- Account dropdown -->
                 <div class="project-link">
                   <ul class="">
+                    <li
+                      class="nav-item list-unstyled navLogOut"
+                      id="logoutHandler"
+                    ></li>
                     <li class="nav-item list-unstyled">
                       <a class="nav-link text-black p-0" href="Login-page.html"
                         ><span class="hover-underline-animation">Login</span></a
@@ -560,6 +564,7 @@
       const emailAdd = document.getElementById("emailAdd");
       const user = JSON.parse(localStorage.getItem("userInfo"));
       const logoutHandler = document.getElementById("logoutHandler");
+      const navLogOut = document.querySelector(".navLogOut");
       console.log(user);
 
       let userData = user.find((data) => {
@@ -569,6 +574,9 @@
       console.log(userData);
 
       usernameDashboard.innerHTML = `<i class="bi bi-person-circle"></i> ${userData.firstName}`;
+      navLogOut.innerHTML = `<a class="nav-link text-black p-0" href="Login-page.html"
+                        ><span class="hover-underline-animation">Logout</span></a
+                      >`;
       usernameDashboard1.innerHTML = `${userData.firstName}`;
       firstName.innerHTML = `Name: ${userData.firstName}`;
       lastName.innerHTML = `Lastname: ${userData.lastName}`;
