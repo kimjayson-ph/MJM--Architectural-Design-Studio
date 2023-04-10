@@ -421,6 +421,7 @@
         </div>
       </div>
     </section>
+    <script src="products.js"></script>
 
     <!-- JS -->
     <script>
@@ -439,36 +440,156 @@
 
       // usernameDashboard
       const usernameDashboard = document.getElementById("userName");
-      const user = JSON.parse(localStorage.getItem("userInfo"));
       const logoutHandler = document.getElementById("logoutHandler");
-      console.log(user);
+      const userInfo = JSON.parse(localStorage.getItem("userInfo"));
+      const userData = userInfo?.find((user) => user.isLoggedIn === true);
+      /*
+            usernameDashboard.innerHTML = userData
+                ? `<i class="bi bi-person-circle"></i> ${userData.firstName}`
+                : "<button>Login</button>";
+              */
 
-      let userData = user.find((data) => {
-        return data.isLoggedIn === true;
-      });
+      usernameDashboard.innerHTML = userData
+        ? `<i class="bi bi-person-circle"></i> ${userData?.firstName}`
+        : "Account";
+      // Add to cart
 
-      console.log(userData);
+      // SELECT ELEMENTS
+      const productsEl = document.querySelector(".products");
+      const cartItemsEl = document.querySelector(".cart-items");
+      const subtotalEl = document.querySelector(".subtotal");
+      const totalItemsInCartEl = document.querySelector(".total-items-in-cart");
+      const checkOut = document.querySelector(".checkOut");
+      const cartEmpty = document.querySelector(".cartEmpty");
+      let cart = JSON.parse(localStorage.getItem("cartItems")) || [];
 
-      usernameDashboard.innerHTML = `<i class="bi bi-person-circle"></i> ${userData.firstName}`;
+      // RENDER PRODUCTS
+      function renderProducts() {
+        products.forEach((product) => {
+          productsEl.innerHTML += `
+                <div class="card rounded-0" style="width: 345px; height: 350px">
+                <img style="width:343px;height: 200px" src="${
+                  product.imgSrc
+                }" alt="${product.name}">
+                    <div>${product.name}</div>
+                    <p>&#8369;${product.price}</p>
+                    <div>${product.description}</div>
+                    <div class="add-to-cart" onclick="addToCart(${product.id})">
+                    ${
+                      userData
+                        ? `<button class ="btn btncolor rounded-0"  data-bs-toggle="offcanvas"
+                            data-bs-target="#offcanvasRight"
+                            aria-controls="offcanvasRight">Add to Cart</button>`
+                        : `
+                        <button class ="btn btncolor rounded-0">Add to Cart</button>
+                        `
+                    }
+                    </div>
+                 </div>
 
-      logoutHandler.addEventListener("click", (e) => {
-        e.preventDefault();
-
-        let newData = user.map((data) => {
-          if (data.isLoggedIn === true) {
-            return { ...userData, isLoggedIn: false };
-          } else {
-            return data;
-          }
+                    `;
         });
+      }
 
-        localStorage.setItem("userInfo", JSON.stringify(newData));
+      // cart array
 
-        window.location.href = "index.html";
-      });
+      // const userData = user.find((data) => data.email === emailAddress.value);
+      // const userData = userInfo?.find((data) => {
+      //   return data.isLoggedIn === true;
+      // });
+      console.log(cart);
+      /*
+        let userCartExist = cart.find((cart) => cart.email === userData.email);
+      console.log(userCartExist, userData);
+      // ADD TO CART
+      if (!userCartExist) {
+        console.log("no cart");
+      }
+      */
+
+      function addToCart(id) {
+        // check if prodcut already exist in cart
+        if (userData) {
+          const item = products.find((product) => product.id === id);
+
+          const userEmail = userData.email;
+          // console.log(item.id);
+          // console.log(cart, "cart");
+          //check if id is present
+
+          //TODO: CHECK IF THE USER HAS CART WITH SAME PRODUCT ID
+
+          const cartItemExist = cart.find(
+            (product) =>
+              product.id === item.id && product.email === userData.email
+          );
+          // console.log(item, "item Data");
+          const userHasCart = cart.find(
+            (product) => product.email === item.email
+          );
+
+          console.log(cartItemExist, "cartItemExist");
+          if (cartItemExist && cartItemExist.email === userData.email) {
+            console.log("hello");
+            console.log(cart, "cart");
+            // const result = changeNumberOfUnits("plus", item.id, userEmail);
+
+            const result = cart.map((cartItem) => {
+              //console.log(cartItem);
+              return cartItem.id === item.id
+                ? { ...cartItem, quantity: cartItem.quantity + 1 }
+                : cartItem;
+            });
+            console.log(result, "result");
+            console.log(cart, "cart");
+
+            cart = [...result];
+          } else {
+            console.log("hi");
+
+            cart = [...cart, { ...item, email: userEmail, quantity: 1 }];
+          }
+        } else {
+          alert("You need to login first!, will be redirected to login page");
+          location.href = "Login-page.html";
+        }
+
+        updateCart();
+      }
+
+      function addCartQuantity(id) {
+        const item = products.find((product) => product.id === id);
+        console.log(item);
+        const result = cart.map((cartItem) => {
+          return cartItem.id === item.id
+            ? { ...cartItem, quantity: cartItem.quantity + 1 }
+            : cartItem;
+        });
+        cart = [...result];
+        updateCart();
+      }
+
+      function minusCartQuantity(id) {
+        const item = products.find((product) => product.id === id);
+        console.log(item);
+        const result = cart.map((cartItem) => {
+          return cartItem.id === item.id && cartItem.quantity > 1
+            ? { ...cartItem, quantity: cartItem.quantity - 1 }
+            : cartItem;
+        });
+        cart = [...result];
+        updateCart();
+      }
+
+      // remove item from cart
+      function removeItemFromCart(id) {
+        cart = cart.filter((item) => item.id !== id);
+        checkOut.innerHTML = ``;
+        cartEmpty.innerHTML = `<p>YOUR CART IS EMPTY</p>`;
+
+        updateCart();
+      }
     </script>
-
-    <script src="products.js"></script>
-    <script src="script.js"></script>
+    <script src="render.js"></script>
   </body>
 </html>

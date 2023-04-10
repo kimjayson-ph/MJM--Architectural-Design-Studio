@@ -32,8 +32,9 @@ const totalItemsInCartEl = document.querySelector(".total-items-in-cart");
 const checkOut = document.querySelector(".checkOut");
 const cartEmpty = document.querySelector(".cartEmpty");
 
+console.log(products);
 // RENDER PRODUCTS
-function renderProdcuts() {
+function renderProducts() {
   products.forEach((product) => {
     productsEl.innerHTML += `
     <div class="card rounded-0" style="width: 345px; height: 350px">
@@ -51,11 +52,19 @@ function renderProdcuts() {
         `;
   });
 }
-renderProdcuts();
+renderProducts();
 
 // cart array
 let cart = JSON.parse(localStorage.getItem("CART")) || [];
 updateCart();
+
+const userInfo = JSON.parse(localStorage.getItem("userInfo"));
+// const userData = user.find((data) => data.email === emailAddress.value);
+// const userData = userInfo?.find((data) => {
+//   return data.isLoggedIn === true;
+// });
+let userData = userInfo.find((user) => user.isLoggedIn === true);
+console.log(userData);
 
 // ADD TO CART
 function addToCart(id) {
@@ -65,13 +74,12 @@ function addToCart(id) {
   } else {
     const item = products.find((product) => product.id === id);
 
+    // const userEmail = userData.email;
     cart.push({
       ...item,
       numberOfUnits: 1,
     });
   }
-
-  updateCart();
 }
 
 // update cart
