@@ -261,6 +261,7 @@
 
     <!-- JS -->
     <script src="products.js"></script>
+    <script src="render.js"></script>
     <script>
       const checkOutCart = document.getElementById("checkOutCart");
       let cartData = JSON.parse(localStorage.getItem("cartItems"));
@@ -276,7 +277,7 @@
                           </div>
                           <div class="col-md">
                             <h4>${data.name}</h4>
-                            <p>Quantity: ${data.numberOfUnits} </p>
+                            <p>Quantity: ${data.quantity} </p>
                             <p>Price: &#8369;${data.price}</p>
 
                             <p>Details: ${data.description}</p>
