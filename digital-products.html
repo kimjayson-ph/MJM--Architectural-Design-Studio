@@ -448,15 +448,32 @@
       const userInfo = JSON.parse(localStorage.getItem("userInfo"));
       const navLogOut = document.querySelector(".navLogOut");
       const userData = userInfo?.find((user) => user.isLoggedIn === true);
-      /*
-            usernameDashboard.innerHTML = userData
-                ? `<i class="bi bi-person-circle"></i> ${userData.firstName}`
-                : "<button>Login</button>";
-              */
 
       usernameDashboard.innerHTML = userData
         ? `<i class="bi bi-person-circle"></i> ${userData?.firstName}`
         : "Account";
+      navLogOut.innerHTML = userData
+        ? `<a class="nav-link text-black p-0" href="Login-page.html"
+                        ><span class="hover-underline-animation">Logout</span></a
+                      >`
+        : "";
+      console.log(logoutHandler);
+
+      logoutHandler.addEventListener("click", (e) => {
+        e.preventDefault();
+
+        let newData = userInfo.map((data) => {
+          if (data.isLoggedIn === true) {
+            return { ...userData, isLoggedIn: false };
+          } else {
+            return data;
+          }
+        });
+
+        localStorage.setItem("userInfo", JSON.stringify(newData));
+
+        window.location.href = "index.html";
+      });
 
       // Add to cart
 
