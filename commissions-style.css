@@ -17,17 +17,23 @@ html {
 }
 
 .commicard {
-  height: 478px;
-  width: 345px;
+  height: 500px;
+  width: 350px;
 }
 
+.commicardbody h5{
+  letter-spacing: 0.3em;
+}
+
+
 .commicardbody {
-  background-color: #d9d9d9;
+  background-color: #efead8;
   display: flex;
   flex-direction: column;
   gap: 35px;
   align-items: center;
   justify-content: center;
+  padding:2rem;
 }
 
 .hug {
@@ -36,6 +42,7 @@ html {
 }
 
 .commi {
+  margin-top:12%;
   margin-bottom: 10%;
 }
 
