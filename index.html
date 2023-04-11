@@ -199,12 +199,12 @@
                       class="nav-item list-unstyled navLogOut"
                       id="logoutHandler"
                     ></li>
-                    <li class="nav-item list-unstyled">
+                    <li class="nav-item list-unstyled removeLogin">
                       <a class="nav-link text-black p-0" href="Login-page.html"
                         ><span class="hover-underline-animation">Login</span></a
                       >
                     </li>
-                    <li class="nav-item list-unstyled">
+                    <li class="nav-item list-unstyled removeRegister">
                       <a
                         class="nav-link text-black p-0"
                         href="register-page.html"
@@ -614,7 +614,8 @@
       const user = JSON.parse(localStorage.getItem("userInfo"));
       const logoutHandler = document.getElementById("logoutHandler");
       const navLogOut = document.querySelector(".navLogOut");
-      console.log(logoutHandler);
+      const removeLogin = document.querySelector(".removeLogin");
+      const removeRegister = document.querySelector(".removeRegister");
 
       let userData = user.find((data) => {
         return data.isLoggedIn === true;
@@ -626,6 +627,8 @@
       navLogOut.innerHTML = `<a class="nav-link text-black p-0" href="Login-page.html"
                         ><span class="hover-underline-animation">Logout</span></a
                       >`;
+      removeLogin.innerHTML = "";
+      removeRegister.innerHTML = "";
 
       logoutHandler.addEventListener("click", (e) => {
         e.preventDefault();

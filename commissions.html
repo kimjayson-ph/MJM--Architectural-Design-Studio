@@ -41,7 +41,12 @@
         <div class="container-fluid">
           <!-- LOGO -->
           <a class="navbar-brand text-black text-bold" href="index.html"
-            ><img class="logo" style="height:80px;" src="main_assets/mjm logo dark-green.png" alt="logo"/></a>
+            ><img
+              class="logo"
+              style="height: 80px"
+              src="main_assets/mjm logo dark-green.png"
+              alt="logo"
+          /></a>
           <button
             class="navbar-toggler"
             type="button"
@@ -195,12 +200,12 @@
                       class="nav-item list-unstyled navLogOut"
                       id="logoutHandler"
                     ></li>
-                    <li class="nav-item list-unstyled">
+                    <li class="nav-item list-unstyled removeLogin">
                       <a class="nav-link text-black p-0" href="Login-page.html"
                         ><span class="hover-underline-animation">Login</span></a
                       >
                     </li>
-                    <li class="nav-item list-unstyled">
+                    <li class="nav-item list-unstyled removeRegister">
                       <a
                         class="nav-link text-black p-0"
                         href="register-page.html"
@@ -242,9 +247,7 @@
               <p class="card-text">
                 <strong>Rate: 1,000.00 php</strong>
               </p>
-              <p class="card-text">
-                Tools: SketchUp, Photoshop
-              </p>
+              <p class="card-text">Tools: SketchUp, Photoshop</p>
               <p class="card-text">
                 Includes: 2 rendered photos, model provided by client
               </p>
@@ -264,10 +267,12 @@
                 <strong>Rate: 4,000.00 php</strong>
               </p>
               <p class="card-text">
-                Tools: SketchUp, Photoshop, Lumion 11, Enscape / Vray 
+                Tools: SketchUp, Photoshop, Lumion 11, Enscape / Vray
               </p>
               <p class="card-text">
-                Includes: Modeling and rendering of small projects (100.00 square meters and less) 3 rendered photos, 3 revisions, environment, source file
+                Includes: Modeling and rendering of small projects (100.00
+                square meters and less) 3 rendered photos, 3 revisions,
+                environment, source file
               </p>
               <p class="card-text">
                 Delivery Time: 4 days; + 1,500.00 php if within 2 days
@@ -285,10 +290,13 @@
                 <strong>Rate: 10,000.00 php</strong>
               </p>
               <p class="card-text">
-                Tools: SketchUp, Photoshop, Lumion 11, Enscape / Vray 
+                Tools: SketchUp, Photoshop, Lumion 11, Enscape / Vray
               </p>
               <p class="card-text">
-                Includes: Modeling, rendering and landscaping of project with complete details such as environment, entourage, texturing and lighting, 8 rendered photos and video walkthrough, 5 revisions, source file (Price may vary on the scale of project)
+                Includes: Modeling, rendering and landscaping of project with
+                complete details such as environment, entourage, texturing and
+                lighting, 8 rendered photos and video walkthrough, 5 revisions,
+                source file (Price may vary on the scale of project)
               </p>
               <p class="card-text">
                 Delivery Time: 10 days; + 3,000.00 php if within 4 days
@@ -299,10 +307,17 @@
         </div>
       </div>
     </section>
-    <br><br><br><br>
+    <br /><br /><br /><br />
     <div class="text-center">
-      <h3>Want to see reference of my works? Head over to my featured projects!</h3>
-      <a class="btn btncolor btn-lg rounded-0" style="width:450px; margin-top:2rem;" href="project-services.html">MY WORKS</a>
+      <h3>
+        Want to see reference of my works? Head over to my featured projects!
+      </h3>
+      <a
+        class="btn btncolor btn-lg rounded-0"
+        style="width: 450px; margin-top: 2rem"
+        href="project-services.html"
+        >MY WORKS</a
+      >
     </div>
 
     <!-- Modal for contact me -->
@@ -452,16 +467,28 @@
             <p>LINKS</p>
             <ul class="list-unstyled">
               <li class="nav-item">
-                <a class="nav-link" href="./project-services.html?redirect=aboutMe"><p>about me</p></a>
+                <a
+                  class="nav-link"
+                  href="./project-services.html?redirect=aboutMe"
+                  ><p>about me</p></a
+                >
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="project-services.html"><p>works</p></a>
+                <a class="nav-link" href="project-services.html"
+                  ><p>works</p></a
+                >
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="./project-services.html?redirect=services"><p>services</p></a>
+                <a
+                  class="nav-link"
+                  href="./project-services.html?redirect=services"
+                  ><p>services</p></a
+                >
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="digital-products.html"><p>digital products</p></a>
+                <a class="nav-link" href="digital-products.html"
+                  ><p>digital products</p></a
+                >
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#!"><p>payments</p></a>
@@ -497,7 +524,15 @@
                 </li>
 
                 <li>
-                  <p style="font-size:12px; width: 450px;"><em>By subscribing, you agree to receive marketing email messages from <strong>MJM Architectural Design Studio</strong> at the email address provided. Unsubscribe at any time, view our <strong>Privacy Policy and Terms of Services</strong>.</em></p>
+                  <p style="font-size: 12px; width: 450px">
+                    <em
+                      >By subscribing, you agree to receive marketing email
+                      messages from
+                      <strong>MJM Architectural Design Studio</strong> at the
+                      email address provided. Unsubscribe at any time, view our
+                      <strong>Privacy Policy and Terms of Services</strong>.</em
+                    >
+                  </p>
                 </li>
               </ul>
             </form>
@@ -562,8 +597,8 @@
       const user = JSON.parse(localStorage.getItem("userInfo"));
       const logoutHandler = document.getElementById("logoutHandler");
       const navLogOut = document.querySelector(".navLogOut");
-      console.log(user);
-
+      const removeLogin = document.querySelector(".removeLogin");
+      const removeRegister = document.querySelector(".removeRegister");
       let userData = user.find((data) => {
         return data.isLoggedIn === true;
       });
@@ -574,6 +609,8 @@
       navLogOut.innerHTML = `<a class="nav-link text-black p-0" href="Login-page.html"
                         ><span class="hover-underline-animation">Logout</span></a
                       >`;
+      removeLogin.innerHTML = "";
+      removeRegister.innerHTML = "";
 
       logoutHandler.addEventListener("click", (e) => {
         e.preventDefault();
