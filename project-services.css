@@ -85,7 +85,7 @@ nav {
 
 /* Project */
 .project-section {
-  margin-top: 15%;
+  margin-top: 12%;
   padding: 0 3rem 0 3rem;
 }
 
@@ -179,6 +179,10 @@ h1 {
 }
 
 /* contact */
+#containerContact{
+  margin-top:5rem;
+}
+
 .contact-section h2 {
   font-weight: bold;
   letter-spacing: 0.3em;
