@@ -7,6 +7,7 @@ const products = [
     description:
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores, error.",
     imgSrc: "./main_assets/sample products.jpg",
+    love_status: "unidentified",
   },
   {
     id: 1,

@@ -188,12 +188,7 @@
                 </div>
               </li>
               <li class="nav-item position-relative project-dropdown">
-                <a
-                  class="btn text-uppercase"
-                  href="user-profile.html"
-                  id="userName"
-                  >ACCOUNT
-                </a>
+                <a class="btn text-uppercase" id="userName">ACCOUNT </a>
                 <!-- Account dropdown -->
                 <div class="project-link">
                   <ul class="">
@@ -259,9 +254,9 @@
               data-aos-duration="2000"
               style="color: black"
             >
-              I create captivating design illustrations that bring
-              spaces to life. Let's collaborate to create a unique design that
-              meets your needs and style preferences.
+              I create captivating design illustrations that bring spaces to
+              life. Let's collaborate to create a unique design that meets your
+              needs and style preferences.
             </h1>
             <br />
             <a
@@ -313,31 +308,35 @@
         <!-- right side -->
         <div class="right-slide">
           <div>
-            <img 
-              src="main_assets/index feature gif.gif" 
+            <img
+              src="main_assets/index feature gif.gif"
               alt="ginama pasalubong center"
-              height="90%">
+              height="90%"
+            />
           </div>
           <div>
-            <img 
-              class="" 
-              src="main_assets/architectural-illustrations.jpg" 
-              alt="architectural illustrations"
-              height="90%" />
-          </div>
-          <div>
-            <img 
-              class="" 
-              src="main_assets/interior sample index.jpg" 
-              alt="interior design"
-              height="90%" />
-          </div>
-          <div>
-            <img 
+            <img
               class=""
-              src="main_assets/digital products gif.gif" 
+              src="main_assets/architectural-illustrations.jpg"
+              alt="architectural illustrations"
+              height="90%"
+            />
+          </div>
+          <div>
+            <img
+              class=""
+              src="main_assets/interior sample index.jpg"
+              alt="interior design"
+              height="90%"
+            />
+          </div>
+          <div>
+            <img
+              class=""
+              src="main_assets/digital products gif.gif"
               alt="digital products gif"
-              height="90%">
+              height="90%"
+            />
           </div>
         </div>
         <div class="action-buttons">
@@ -642,6 +641,15 @@
       });
 
       console.log(userData);
+
+      usernameDashboard.addEventListener("click", (e) => {
+        e.preventDefault();
+        // console.log(userData);
+
+        if (userData) {
+          location.href = "user-profile.html";
+        }
+      });
 
       usernameDashboard.innerHTML = `<i class="bi bi-person-circle"></i> ${userData.firstName}`;
       navLogOut.innerHTML = `<a class="nav-link text-black p-0" href="Login-page.html"

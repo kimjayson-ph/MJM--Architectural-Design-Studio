@@ -243,3 +243,12 @@ html {
 .commi {
   margin-bottom: 10%;
 }
+
+.modal_image img {
+  height: 200px;
+  width: 300px;
+}
+
+.hide_element {
+  display: hidden;
+}

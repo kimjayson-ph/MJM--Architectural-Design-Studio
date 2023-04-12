@@ -604,6 +604,14 @@
       });
 
       console.log(userData);
+      usernameDashboard.addEventListener("click", (e) => {
+        e.preventDefault();
+        // console.log(userData);
+
+        if (userData) {
+          location.href = "user-profile.html";
+        }
+      });
 
       usernameDashboard.innerHTML = `<i class="bi bi-person-circle"></i> ${userData.firstName}`;
       navLogOut.innerHTML = `<a class="nav-link text-black p-0" href="Login-page.html"
