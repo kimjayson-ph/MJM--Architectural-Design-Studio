@@ -28,8 +28,8 @@ function addToCart(id) {
 
 // update cart
 function updateCart() {
-  renderCartItems();
-  renderSubtotal();
+  // renderCartItems();
+  // renderSubtotal();
 
   // save cart to local storage
   localStorage.setItem("cartItems", JSON.stringify(cart));
@@ -88,6 +88,30 @@ function updateCart() {
 //   });
 // }
 
+function addCartQuantity(id) {
+  const item = products.find((product) => product.id === id);
+  console.log(item);
+  const result = cart.map((cartItem) => {
+    return cartItem.id === item.id
+      ? { ...cartItem, quantity: cartItem.quantity + 1 }
+      : cartItem;
+  });
+  cart = [...result];
+  updateCart();
+}
+
+function minusCartQuantity(id) {
+  const item = products.find((product) => product.id === id);
+  console.log(item);
+  const result = cart.map((cartItem) => {
+    return cartItem.id === item.id && cartItem.quantity > 1
+      ? { ...cartItem, quantity: cartItem.quantity - 1 }
+      : cartItem;
+  });
+  cart = [...result];
+  updateCart();
+}
+
 // remove item from cart
 function removeItemFromCart(id) {
   cart = cart.filter((item) => item.id !== id);
@@ -97,28 +121,33 @@ function removeItemFromCart(id) {
   updateCart();
 }
 
-// change number of units for an item
-function changeNumberOfUnits(action, id) {
-  cart = cart.map((item) => {
-    let numberOfUnits = item.numberOfUnits;
-
-    if (item.id === id) {
-      if (action === "minus" && numberOfUnits > 1) {
-        numberOfUnits--;
-      } else if (action === "plus" && numberOfUnits < item.instock) {
-        numberOfUnits++;
-      }
-    }
-
-    return {
-      ...item,
-      numberOfUnits,
-    };
-  });
-
-  updateCart();
-}
-
 // edit address
-const editPhone = document.getElementById("editPhone").value;
-const editMyAddress = document.getElementById("editMyAddress").value;
+const editPhone = document.getElementById("editPhone");
+const editMyAddress = document.getElementById("editMyAddress");
+const editAddressHandler = document.getElementById("editAddressHandler");
+
+editAddressHandler.addEventListener("click", (e) => {
+  e.preventDefault();
+  console.log(editPhone.value, editMyAddress.value);
+
+  console.log(userData);
+  // let newUserValue = [
+  //   ...user,
+  //   { ...userData, phone: editPhone.value, address: editMyAddress.value },
+  // ];
+
+  let newUserValue = user.map((user) => {
+    if (user.email === userData.email) {
+      return {
+        ...userData,
+        phone: editPhone.value,
+        address: editMyAddress.value,
+      };
+    } else {
+      return user;
+    }
+  });
+  console.log(newUserValue);
+
+  localStorage.setItem("userInfo", JSON.stringify(newUserValue));
+});

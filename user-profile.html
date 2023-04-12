@@ -346,6 +346,7 @@
                 <button
                   class="btn btncolor mb-3 buttonregister rounded-0"
                   type="submit"
+                  id="editAddressHandler"
                 >
                   ADD A NEW ADDRESS
                 </button>
@@ -583,17 +584,21 @@
         return data.isLoggedIn === true;
       });
 
-      usernameDashboard.innerHTML = `<i class="bi bi-person-circle"></i> ${userData.firstName}`;
+      usernameDashboard.innerHTML = userData
+        ? `<i class="bi bi-person-circle"></i> ${userData.firstName}`
+        : "";
       navLogOut.innerHTML = `<a class="nav-link text-black p-0" href="Login-page.html"
                         ><span class="hover-underline-animation">Logout</span></a
                       >`;
       removeLogin.innerHTML = "";
       removeRegister.innerHTML = "";
 
-      usernameDashboard1.innerHTML = `${userData.firstName}`;
-      firstName.innerHTML = `Name: ${userData.firstName}`;
-      lastName.innerHTML = `Lastname: ${userData.lastName}`;
-      emailAdd.innerHTML = `Email: ${userData.email}`;
+      if (userData) {
+        usernameDashboard1.innerHTML = `${userData.firstName}`;
+        firstName.innerHTML = `Name: ${userData.firstName}`;
+        lastName.innerHTML = `Lastname: ${userData.lastName}`;
+        emailAdd.innerHTML = `Email: ${userData.email}`;
+      }
 
       logoutHandler.addEventListener("click", (e) => {
         e.preventDefault();

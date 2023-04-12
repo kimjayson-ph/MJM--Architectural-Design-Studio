@@ -76,4 +76,3 @@ console.log(cart);
 // updateCart();
 renderSubtotal();
 renderCartItems();
-renderProducts();

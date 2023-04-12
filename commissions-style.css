@@ -21,19 +21,18 @@ html {
   width: 350px;
 }
 
-.commicardbody h5{
+.commicardbody h5 {
   letter-spacing: 0.3em;
 }
-
 
 .commicardbody {
   background-color: #efead8;
   display: flex;
   flex-direction: column;
-  gap: 35px;
+  /* gap: 35px; */
   align-items: center;
   justify-content: center;
-  padding:2rem;
+  /* padding: 2rem; */
 }
 
 .hug {
@@ -42,7 +41,7 @@ html {
 }
 
 .commi {
-  margin-top:12%;
+  margin-top: 12%;
   margin-bottom: 10%;
 }
 
