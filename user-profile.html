@@ -587,11 +587,13 @@
       usernameDashboard.innerHTML = userData
         ? `<i class="bi bi-person-circle"></i> ${userData.firstName}`
         : "";
-      navLogOut.innerHTML = `<a class="nav-link text-black p-0" href="Login-page.html"
+      navLogOut.innerHTML = userData
+        ? `<a class="nav-link text-black p-0" href="Login-page.html"
                         ><span class="hover-underline-animation">Logout</span></a
-                      >`;
-      removeLogin.innerHTML = "";
-      removeRegister.innerHTML = "";
+                      >`
+        : "";
+      removeLogin.innerHTML = userData ? "" : "";
+      removeRegister.innerHTML = userData ? "" : "";
 
       if (userData) {
         usernameDashboard1.innerHTML = `${userData.firstName}`;
