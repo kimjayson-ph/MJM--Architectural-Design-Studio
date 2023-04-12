@@ -118,3 +118,7 @@ function changeNumberOfUnits(action, id) {
 
   updateCart();
 }
+
+// edit address
+const editPhone = document.getElementById("editPhone").value;
+const editMyAddress = document.getElementById("editMyAddress").value;

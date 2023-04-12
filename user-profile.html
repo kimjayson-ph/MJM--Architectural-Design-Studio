@@ -265,7 +265,8 @@
           <p id="firstName">Name:</p>
           <p id="lastName">Lastname:</p>
           <p id="emailAdd">Email:</p>
-          <p>Address:</p>
+          <p id="phone">Phone:</p>
+          <p id="myAddress">Address:</p>
         </div>
         <div>
           <button
@@ -294,42 +295,47 @@
           </div>
           <div class="modal-body">
             <!-- Modal form -->
-            <form action="" class="login-forms needs-validation" novalidate>
-              <div class="form-floating mb-3">
+            <form
+              action=""
+              id="editForm"
+              class="login-forms needs-validation"
+              novalidate
+            >
+              <!-- <div class="form-floating mb-3">
                 <input
                   type="text"
                   class="form-control rounded-0"
-                  id="fname"
+                  id="editFirstName"
                   placeholder="First name"
                   required
                 />
                 <label for="floatingInputfname">First name</label>
-              </div>
-              <div class="form-floating mb-3">
+              </div> -->
+              <!-- <div class="form-floating mb-3">
                 <input
                   type="text"
                   class="form-control rounded-0"
-                  id="lname"
+                  id="editLastName"
                   placeholder="Last name"
                   required
                 />
                 <label for="floatingInputlastname">Last name</label>
-              </div>
+              </div> -->
               <div class="form-floating mb-3">
                 <input
-                  type="email"
+                  type="number"
                   class="form-control rounded-0"
-                  id="email"
+                  id="editPhone"
                   placeholder="name@example.com"
                   required
                 />
-                <label for="floatingInputemail">Email address</label>
+                <label for="floatingInputemail">Phone</label>
               </div>
               <div class="form-floating mb-3">
                 <input
                   type="text"
                   class="form-control rounded-0"
-                  id="pass"
+                  id="editMyAddress"
                   placeholder="Address"
                   required
                 />
@@ -576,8 +582,6 @@
       let userData = user.find((data) => {
         return data.isLoggedIn === true;
       });
-
-      console.log(userData);
 
       usernameDashboard.innerHTML = `<i class="bi bi-person-circle"></i> ${userData.firstName}`;
       navLogOut.innerHTML = `<a class="nav-link text-black p-0" href="Login-page.html"
