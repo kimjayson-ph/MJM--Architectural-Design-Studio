@@ -187,8 +187,20 @@
                       class="nav-item list-unstyled navLogOut"
                       id="logoutHandler"
                     ></li>
-                    <li class="nav-item list-unstyled removeLogin"></li>
-                    <li class="nav-item list-unstyled removeRegister"></li>
+                    <li class="nav-item list-unstyled">
+                      <a class="nav-link text-black p-0" href="Login-page.html"
+                        ><span class="hover-underline-animation">Login</span></a
+                      >
+                    </li>
+                    <li class="nav-item list-unstyled">
+                      <a
+                        class="nav-link text-black p-0"
+                        href="register-page.html"
+                        ><span class="hover-underline-animation"
+                          >Register</span
+                        ></a
+                      >
+                    </li>
                   </ul>
                 </div>
               </li>
@@ -273,11 +285,7 @@
       <div class="container mt-5">
         <div>
           <p class="w-50 m-auto pt-5 pb-4 text-center">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem amet
-            magnam, alias, labore nesciunt unde voluptate laborum deserunt
-            aperiam explicabo, beatae sed! Deserunt deleniti esse fuga quisquam
-            consequatur voluptates nostrum cupiditate asperiores nam ex, nulla
-            voluptate magni mollitia dolore. Incidunt.
+            Can't find what you like? Feel free to request a commission and we can discuss on things you want to personalize, be it a digital planner or an illustration! Click commissions to find out for more!
           </p>
         </div>
 
@@ -436,48 +444,15 @@
       const userInfo = JSON.parse(localStorage.getItem("userInfo"));
       const navLogOut = document.querySelector(".navLogOut");
       const userData = userInfo?.find((user) => user.isLoggedIn === true);
-      const removeLogin = document.querySelector(".removeLogin");
-      const removeRegister = document.querySelector(".removeRegister");
-
-      removeLogin.innerHTML = userData
-        ? ``
-        : `<a class="nav-link text-black p-0" href="Login-page.html"
-                        ><span class="hover-underline-animation">Login</span></a
-                      >`;
-      removeRegister.innerHTML = userData
-        ? ``
-        : ` <a
-                        class="nav-link text-black p-0"
-                        href="register-page.html"
-                        ><span class="hover-underline-animation"
-                          >Register</span
-                        ></a
-                      >`;
+      /*
+            usernameDashboard.innerHTML = userData
+                ? `<i class="bi bi-person-circle"></i> ${userData.firstName}`
+                : "<button>Login</button>";
+              */
 
       usernameDashboard.innerHTML = userData
         ? `<i class="bi bi-person-circle"></i> ${userData?.firstName}`
         : "Account";
-      navLogOut.innerHTML = userData
-        ? `<a class="nav-link text-black p-0" href="Login-page.html"
-                        ><span class="hover-underline-animation">Logout</span></a
-                      >`
-        : "";
-
-      logoutHandler.addEventListener("click", (e) => {
-        e.preventDefault();
-
-        let newData = userInfo.map((data) => {
-          if (data.isLoggedIn === true) {
-            return { ...userData, isLoggedIn: false };
-          } else {
-            return data;
-          }
-        });
-
-        localStorage.setItem("userInfo", JSON.stringify(newData));
-
-        window.location.href = "digital-products.html";
-      });
 
       // Add to cart
 
@@ -494,8 +469,8 @@
       function renderProducts() {
         products.forEach((product) => {
           productsEl.innerHTML += `
-                <div class="card rounded-0" style="width: 345px; height: 350px">
-                <img style="width:343px;height: 200px" src="${
+                <div class="card rounded-0" style="width: 345px; height: 600px">
+                <img style="width:350px;height: 350px" src="${
                   product.imgSrc
                 }" alt="${product.name}">
                     <div>${product.name}</div>
@@ -517,9 +492,6 @@
                     `;
         });
       }
-
-      // RENDER THE PRODUCTS IN USER INTERFACE
-      renderProducts();
 
       // cart array
 
