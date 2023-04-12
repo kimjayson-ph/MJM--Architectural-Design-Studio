@@ -127,7 +127,6 @@ const editMyAddress = document.getElementById("editMyAddress");
 const editAddressHandler = document.getElementById("editAddressHandler");
 
 editAddressHandler.addEventListener("click", (e) => {
-  e.preventDefault();
   console.log(editPhone.value, editMyAddress.value);
 
   console.log(userData);
@@ -151,3 +150,9 @@ editAddressHandler.addEventListener("click", (e) => {
 
   localStorage.setItem("userInfo", JSON.stringify(newUserValue));
 });
+
+let phone = document.getElementById("phone");
+let myAddress = document.getElementById("myAddress");
+
+phone.innerHTML = userData.phone;
+myAddress.innerHTML = userData.address;
