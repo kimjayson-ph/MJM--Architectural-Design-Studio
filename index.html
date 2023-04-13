@@ -23,6 +23,7 @@
     />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
     <!-- CSS -->
     <link rel="stylesheet" href="index-style.css" />
 
@@ -34,6 +35,10 @@
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
     <link rel="manifest" href="/site.webmanifest" />
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
+    ></script>
   </head>
   <body>
     <!-- Navbar -->
@@ -548,10 +553,15 @@
                     class="p-2 w-75 rounded-0"
                     type="email"
                     placeholder="enter your email"
+                    id="emailInput"
                   />
                 </li>
                 <li>
-                  <button type="submit" class="btn btncolor rounded-0 w-75">
+                  <button
+                    type="submit"
+                    class="btn btncolor rounded-0 w-75"
+                    id="sendEmailHandler"
+                  >
                     SUBSCRIBE
                   </button>
                 </li>
@@ -709,5 +719,6 @@
       upButton.addEventListener("click", () => changeSlide("up"));
       downButton.addEventListener("click", () => changeSlide("down"));
     </script>
+    <script src="sendEmail.js"></script>
   </body>
 </html>
