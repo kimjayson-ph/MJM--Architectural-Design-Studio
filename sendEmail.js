@@ -2,34 +2,37 @@ const emailInput = document.getElementById("emailInput");
 const sendEmailHandler = document.getElementById("sendEmailHandler");
 
 (function () {
-  emailjs.init("DzQp6S_m5gqqyCgr8");
+  emailjs.init("otei59u5tqV2CV1ig");
 })();
 
 sendEmailHandler.addEventListener("click", (e) => {
   e.preventDefault();
   let userEmail = emailInput.value;
 
-  let serviceID = "service_du75eqt";
-  let templateID = "template_0mhodth";
+  let serviceID = "service_bkog70i";
+  let templateID = "template_uodaxm4";
   let templateParams = {
-    from_name: "Jayson and El Designs",
+    from_name: "MJM Architectural design studio",
     send_to: userEmail,
-    message: "You are subscribe to our newsletter by jayson",
-  };
-  let publicKey = "DzQp6S_m5gqqyCgr8";
+    message: `Thank you for your interest in our newsletter! To stay up-to-date on our latest news, exclusive promotions, and special events, please click the link below to confirm your subscription:
 
-  emailjs.send(serviceID, templateID, templateParams, publicKey);
-  /*
-  Email.send({
-    Host: "smtp.elasticemail.com",
-    Username: "w3w2433@email.com",
-    Password: "633E12ECEF93047BDD07B7F534EC1E8F2E2A",
-    To: userEmail,
-    From: "w3w2433@gmail.com",
-    Subject: "This is the Test",
-    Body: "This is not a Test",
-  }).then((message) => alert(message));
-  */
+    [https://kimjayson-ph.github.io/MJM-Architectural-Design-Studio/]
+    
+    Once you confirm your subscription, you will start receiving our newsletter in your inbox every [frequency of newsletter delivery] with all the latest updates.
+    
+    Thank you for subscribing!`,
+  };
+  let publicKey = "otei59u5tqV2CV1ig";
+
+  emailjs.send(serviceID, templateID, templateParams, publicKey).then(
+    function (response) {
+      console.log("SUCCESS!", response.status, response.text);
+    },
+    function (error) {
+      console.log("FAILED...", error);
+    }
+  );
+
   alert("Subcribe");
   emailInput.value = "";
 });
