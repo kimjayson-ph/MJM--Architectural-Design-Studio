@@ -8,6 +8,10 @@ const sendEmailHandler = document.getElementById("sendEmailHandler");
 sendEmailHandler.addEventListener("click", (e) => {
   e.preventDefault();
   let userEmail = emailInput.value;
+  if (userEmail.length === 0) {
+    alert("input required!");
+    return false;
+  }
 
   let serviceID = "service_bkog70i";
   let templateID = "template_uodaxm4";

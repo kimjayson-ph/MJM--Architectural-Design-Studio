@@ -21,6 +21,10 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css"
     />
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
+    ></script>
     <!-- CSS -->
     <link rel="stylesheet" href="commissions-style.css" />
     <link rel="stylesheet" href="project-services.css" />
@@ -515,10 +519,15 @@
                     class="p-2 w-75 rounded-0"
                     type="email"
                     placeholder="enter your email"
+                    id="emailInput"
                   />
                 </li>
                 <li>
-                  <button type="submit" class="btn btncolor rounded-0 w-75">
+                  <button
+                    type="submit"
+                    id="sendEmailHandler"
+                    class="btn btncolor rounded-0 w-75"
+                  >
                     SUBSCRIBE
                   </button>
                 </li>

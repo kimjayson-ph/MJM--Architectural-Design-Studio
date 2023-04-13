@@ -22,7 +22,10 @@
     />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
+    ></script>
     <!-- CSS -->
     <link rel="stylesheet" href="project-services.css" />
 
@@ -834,10 +837,15 @@
                     class="p-2 w-75 rounded-0"
                     type="email"
                     placeholder="enter your email"
+                    id="emailInput"
                   />
                 </li>
                 <li>
-                  <button type="submit" class="btn btncolor rounded-0 w-75">
+                  <button
+                    type="submit"
+                    id="sendEmailHandler"
+                    class="btn btncolor rounded-0 w-75"
+                  >
                     SUBSCRIBE
                   </button>
                 </li>
@@ -877,7 +885,7 @@
       src="//code.tidio.co/hwlo38gqpbu0sakmysea9melyanvyzud.js"
       async
     ></script>
-    <script src="sendEmail.js"></script>
+
     <script>
       AOS.init();
     </script>
@@ -986,5 +994,6 @@
         window.location.href = "index.html";
       });
     </script>
+    <script src="sendEmail.js"></script>
   </body>
 </html>
