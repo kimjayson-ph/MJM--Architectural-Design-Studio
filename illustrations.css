@@ -157,6 +157,6 @@ h1 {
 
 @media screen and (max-width: 768px) {
   .heading-illu {
-    margin-top: 20% !important;
+    margin-top: 20% ;
   }
 }
