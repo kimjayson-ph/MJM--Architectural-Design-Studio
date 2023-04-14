@@ -245,7 +245,7 @@
       <div class="container row m-auto flex-wrap">
         <!-- Card1 -->
         <div class="col-md">
-          <div class="card commicard">
+          <div class="card commicard" style="background-color: #efead8">
             <div class="card-body commicardbody">
               <h5 class="card-title"><strong>BASIC</strong></h5>
               <p class="card-text">
@@ -258,13 +258,21 @@
               <p class="card-text">
                 Delivery Time: 2 days; + 500.00 php if within the day
               </p>
-              <a href="#" class="btn btncolor rounded-0 hug">SELECT</a>
+            </div>
+            <div class="m-auto pb-3">
+              <a
+                href="#"
+                data-bs-toggle="modal"
+                data-bs-target="#modalSelect1"
+                class="btn btncolor rounded-0 hug"
+                >SELECT</a
+              >
             </div>
           </div>
         </div>
         <!-- Card2 -->
         <div class="col-md">
-          <div class="card commicard">
+          <div class="card commicard" style="background-color: #efead8">
             <div class="card-body commicardbody">
               <h5 class="card-title"><strong>STANDARD</strong></h5>
               <p class="card-text">
@@ -281,13 +289,21 @@
               <p class="card-text">
                 Delivery Time: 4 days; + 1,500.00 php if within 2 days
               </p>
-              <a href="#" class="btn btncolor rounded-0 hug">SELECT</a>
+            </div>
+            <div class="m-auto pb-3">
+              <a
+                href="#"
+                data-bs-toggle="modal"
+                data-bs-target="#modalSelect2"
+                class="btn btncolor rounded-0 hug"
+                >SELECT</a
+              >
             </div>
           </div>
         </div>
         <!-- Card3 -->
         <div class="col-md">
-          <div class="card commicard">
+          <div class="card commicard" style="background-color: #efead8">
             <div class="card-body commicardbody">
               <h5 class="card-title"><strong>PREMIUM</strong></h5>
               <p class="card-text">
@@ -305,12 +321,124 @@
               <p class="card-text">
                 Delivery Time: 10 days; + 3,000.00 php if within 4 days
               </p>
-              <a href="#" class="btn btncolor rounded-0 hug">SELECT</a>
+            </div>
+            <div class="m-auto pb-3">
+              <a
+                href="#"
+                data-bs-toggle="modal"
+                data-bs-target="#modalSelect3"
+                class="btn btncolor rounded-0 hug"
+                >SELECT</a
+              >
             </div>
           </div>
         </div>
       </div>
     </section>
+
+    <!-- modal for commissions -->
+    <div
+      class="modal fade"
+      id="modalSelect1"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">
+              Order details:
+            </h1>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">...</div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+            <button type="button" class="btn btn-primary">Save changes</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- modal for commission 2 -->
+    <div
+      class="modal fade"
+      id="modalSelect2"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">...</div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+            <button type="button" class="btn btn-primary">Save changes</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- modal for commission 3 -->
+    <div
+      class="modal fade"
+      id="modalSelect3"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">...</div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+            <button type="button" class="btn btn-primary">Save changes</button>
+          </div>
+        </div>
+      </div>
+    </div>
     <!-- <br /><br /><br /><br /> -->
     <div class="text-center">
       <h3>
