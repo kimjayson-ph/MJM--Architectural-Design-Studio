@@ -280,19 +280,19 @@
     <section>
       <div class="container mt-5">
         <div>
-          <p class="w-50 m-auto pt-5 pb-4 text-center">
+          <h3 class="w-75 m-auto pt-5 pb-4 text-center">
             Can't find what you're looking for? Or want items to be more personalized? Let me know about it! Head over to commissions to see rates for personalized items, or view my Illustrations Page to see more of my works!
-          </p>
+          </h3>
         </div>
 
         <div class="text-center">
-          <a class="btn btncolor rounded-0" href="commissions.html"
+          <a class="btn btncolor rounded-0 btn-lg w-50" href="commissions.html"
             >COMMISSIONS</a
           >
         </div>
         <br>
         <div class="text-center">
-          <a class="btn btncolor rounded-0" href="#"
+          <a class="btn btncolor rounded-0 btn-lg w-50" href="#"
             >ILLUSTRATIONS</a
           >
         </div>
@@ -330,7 +330,7 @@
 
               <a
                 class="nav-link linkedin"
-                href="https://www.linkedin.com/in/marie- joenaren-m-833101151/"
+                href="https://www.linkedin.com/in/marie-joenaren-m-833101151/"
               >
                 <i class="bi bi-linkedin"></i>
               </a>
@@ -523,19 +523,19 @@
       function renderProducts() {
         products.forEach((product) => {
           productsEl.innerHTML += `
-                <div class="card rounded-0" style="width: 352px; height: 550px" >
+                <div class="card rounded-0" style="width: 352px; height: 620px" >
                   <a href="" data-bs-toggle="modal" data-bs-target="#modal${
                     product.id
                   }">
-                  <img style="width:350px;height: 350px" src="${
+                  <img style="width:350px; height:350px;" src="${
                     product.imgSrc
                   }" alt="${product.name}"> 
                 </a>
         
-                    <div>${product.name}</div>
-                    <p>&#8369;${product.price}</p>
-                    <div>${product.description}</div>
-                    <div class="add-to-cart" onclick="addToCart(${product.id})">
+                    <div class="pt-3 ps-3" style="font-size: 22px;">${product.name}</div>
+                    <p class="ps-3">&#8369;${product.price}</p>
+                    <div class="p-3">${product.description}</div>
+                    <div class="position-absolute bottom-0 add-to-cart" onclick="addToCart(${product.id})">
                     ${
                       userData
                         ? `<button class ="btn btncolor rounded-0"  data-bs-toggle="offcanvas"
@@ -580,10 +580,18 @@
               </div>
               <div class="modal-body">
                 <div class="modal_image">
-                  <img src="${product.imgSrc}">
+                  <img style="height:350px; width:350px;" src="${product.imgSrc}">
+                  <img style="height:500px; width:350px;" src="${product.productivity1}">
                 </div>
-                <p>
-                  ${product.description}
+                <div class="d-inline">
+                  <img class="pt-3 ps-3" style="height:500px; width:350px;" src="${product.productivity2}">
+                </div>
+
+                <div class="d-inline">
+                  <img class="pt-3 ps-3" style="height:500px; width:350px" src="${product.productivity3}">
+                </div>
+                <p class="pt-5">
+                  ${product.detail}
               </p></div>
          
             </div>
