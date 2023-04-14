@@ -50,102 +50,113 @@ nav {
   background-color: #efead8;
 }
 
-
 /* footer */
 #mainFooter {
-    background: #285430;
-    color: white;
-    padding-top: 3rem;
-  }
-  
-  #mainFooter p {
-    padding: 5px;
-  }
-  
-  .contacts {
-    padding-left: 2rem;
-  }
-  
-  .footerLogo {
-    height: 75px;
-  }
-  
-  #socialLinks a {
-    font-size: 2rem;
-    position: absolute;
-  }
-  
-  #socialLinks a :hover {
-    color: #39a90fff;
-  }
-  
-  .instagram {
-    margin-left: 3rem;
-  }
-  
-  .linkedin {
-    margin-left: 6rem;
-  }
-  
-  .whatsapp {
-    margin-left: 9rem;
-  }
-  
-  .youtube {
-    margin-left: 12rem;
-  }
-  
-  .indexLogo {
-    margin-top: 100px;
-  }
-  
-  .qLinks ul li a :hover {
-    color: #39a90fff;
-  }
-  
-  .termsAndPolicies {
-    margin-top: 4rem;
-  }
-  
-  .termsAndPolicies ul li a {
-    position: absolute;
-  }
-  
-  .policy {
-    margin-left: 200px;
-  }
-  
-  /* navbar hoverline */
-  .hover-underline-animation {
-    display: inline-block;
-    position: relative;
-    color: black;
-  }
-  
-  .hover-underline-animation::after {
-    content: "";
-    position: absolute;
-    width: 100%;
-    transform: scaleX(0);
-    height: 2px;
-    bottom: 0;
-    left: 0;
-    background-color: black;
-    transform-origin: bottom right;
-    transition: transform 0.25s ease-out;
-  }
-  
-  .hover-underline-animation:hover::after {
-    transform: scaleX(1);
-    transform-origin: bottom left;
-  }
+  background: #285430;
+  color: white;
+  padding-top: 3rem;
+}
 
-  /* illustration */
-  .illus-section{
-    margin-top: 12%;
-    padding: 0 3rem 0 3rem;
+#mainFooter p {
+  padding: 5px;
+}
+
+.contacts {
+  padding-left: 2rem;
+}
+
+.footerLogo {
+  height: 75px;
+}
+
+#socialLinks a {
+  font-size: 2rem;
+  position: absolute;
+}
+
+#socialLinks a :hover {
+  color: #39a90fff;
+}
+
+.instagram {
+  margin-left: 3rem;
+}
+
+.linkedin {
+  margin-left: 6rem;
+}
+
+.whatsapp {
+  margin-left: 9rem;
+}
+
+.youtube {
+  margin-left: 12rem;
+}
+
+.indexLogo {
+  margin-top: 100px;
+}
+
+.qLinks ul li a :hover {
+  color: #39a90fff;
+}
+
+.termsAndPolicies {
+  margin-top: 4rem;
+}
+
+.termsAndPolicies ul li a {
+  position: absolute;
+}
+
+.policy {
+  margin-left: 200px;
+}
+
+/* navbar hoverline */
+.hover-underline-animation {
+  display: inline-block;
+  position: relative;
+  color: black;
+}
+
+.hover-underline-animation::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: black;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.hover-underline-animation:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+/* illustration */
+.illus-section {
+  margin-top: 12%;
+  padding: 0 3rem 0 3rem;
+}
+
+h1 {
+  font-weight: 600 !important;
+}
+
+@media screen and (max-width: 376px) {
+  .heading-illu {
+    margin-top: 35% !important;
   }
-  
-  h1 {
-    font-weight: 600 !important;
+}
+
+@media screen and (max-width: 768px) {
+  .heading-illu {
+    margin-top: 20% !important;
   }
+}

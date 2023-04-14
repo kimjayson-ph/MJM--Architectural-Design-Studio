@@ -185,6 +185,12 @@ h1 {
   }
 }
 
+@media screen and (max-width: 768px) {
+  .aboutRow {
+    padding: 0% !important;
+  }
+}
+
 .aboutContent {
   font-size: 20px;
   padding-right: 10rem;
@@ -193,6 +199,22 @@ h1 {
 @media screen and (max-width: 376px) {
   .aboutContent {
     padding: 0%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .aboutContent {
+    padding-right: 0% !important;
+  }
+}
+
+@media screen and (max-width: 376px) {
+  .heading-reg {
+    margin-top: 10%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .heading-reg {
+    margin-top: 10%;
   }
 }
 

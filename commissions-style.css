@@ -164,3 +164,15 @@ nav {
   transform: scaleX(1);
   transform-origin: bottom left;
 }
+
+@media screen and (max-width: 376px) {
+  .heading-commi {
+    margin-top: 28% !important;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .heading-commi {
+    margin-top: 20%;
+  }
+}
