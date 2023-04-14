@@ -174,3 +174,9 @@ nav {
   transform: scaleX(1);
   transform-origin: bottom left;
 }
+
+@media screen and (max-width: 376px) {
+  .heading-project {
+    margin-top: 35% !important;
+  }
+}
