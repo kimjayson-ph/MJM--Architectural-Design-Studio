@@ -42,9 +42,12 @@
       <nav class="navbar fixed-top navbar-expand-md navbar-dark p-md-3">
         <div class="container-fluid">
           <!-- LOGO -->
-          <a class="navbar-brand text-black text-bold" href="index.html"
-            ><img class="logo" src="images/logo.png" alt="logo"
-          /></a>
+          <img
+          class="logo"
+          style="height: 80px"
+          src="main_assets/mjm logo dark-green.png"
+          alt="logo"
+      /></a>
           <button
             class="navbar-toggler"
             type="button"
@@ -278,17 +281,19 @@
       <div class="container mt-5">
         <div>
           <p class="w-50 m-auto pt-5 pb-4 text-center">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem amet
-            magnam, alias, labore nesciunt unde voluptate laborum deserunt
-            aperiam explicabo, beatae sed! Deserunt deleniti esse fuga quisquam
-            consequatur voluptates nostrum cupiditate asperiores nam ex, nulla
-            voluptate magni mollitia dolore. Incidunt.
+            Can't find what you're looking for? Or want items to be more personalized? Let me know about it! Head over to commissions to see rates for personalized items, or view my Illustrations Page to see more of my works!
           </p>
         </div>
 
         <div class="text-center">
           <a class="btn btncolor rounded-0" href="commissions.html"
             >COMMISSIONS</a
+          >
+        </div>
+        <br>
+        <div class="text-center">
+          <a class="btn btncolor rounded-0" href="#"
+            >ILLUSTRATIONS</a
           >
         </div>
       </div>
@@ -357,16 +362,16 @@
             <p>LINKS</p>
             <ul class="list-unstyled">
               <li class="nav-item">
-                <a class="nav-link" href="#"><p>about</p></a>
+                <a class="nav-link" href="./project-services.html?redirect=aboutMe"><p>about me</p></a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#"><p>works</p></a>
+                <a class="nav-link" href="project-services.html"><p>works</p></a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#"><p>services</p></a>
+                <a class="nav-link" href="./project-services.html?redirect=services"><p>services</p></a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="shop.html"><p>digital products</p></a>
+                <a class="nav-link" href="digital-products.html"><p>digital products</p></a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#!"><p>payments</p></a>
@@ -518,11 +523,11 @@
       function renderProducts() {
         products.forEach((product) => {
           productsEl.innerHTML += `
-                <div class="card rounded-0" style="width: 345px; height: 350px" >
+                <div class="card rounded-0" style="width: 352px; height: 550px" >
                   <a href="" data-bs-toggle="modal" data-bs-target="#modal${
                     product.id
                   }">
-                  <img style="width:343px;height: 200px" src="${
+                  <img style="width:350px;height: 350px" src="${
                     product.imgSrc
                   }" alt="${product.name}"> 
                 </a>
@@ -576,18 +581,10 @@
               <div class="modal-body">
                 <div class="modal_image">
                   <img src="${product.imgSrc}">
-                 
-
-
                 </div>
-                   <p>
-                    ${product.description}
-                  
-                
-                   </p>
-                  
-                </div>
-                
+                <p>
+                  ${product.description}
+              </p></div>
          
             </div>
           </div>
