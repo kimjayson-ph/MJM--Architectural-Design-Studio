@@ -32,7 +32,6 @@ const totalItemsInCartEl = document.querySelector(".total-items-in-cart");
 const checkOut = document.querySelector(".checkOut");
 const cartEmpty = document.querySelector(".cartEmpty");
 
-console.log(products);
 // RENDER PRODUCTS
 function renderProducts() {
   products.forEach((product) => {

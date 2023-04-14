@@ -548,7 +548,7 @@
                 return data;
               }
             });
-            // console.log(newData);
+
             localStorage.setItem("userInfo", JSON.stringify(newData));
             errorbox.innerHTML = `<div class="alert alert-success" role="alert">
       Login successful!
@@ -556,16 +556,17 @@
             setTimeout(() => {
               location.href = "digital-products.html";
             }, 1200);
-          } else {
+          } else if (data.email === 0) {
             // FALLBACK FOR WRONG INPUT CREDENTIAL
             errorbox.innerHTML = `<div class="alert alert-danger" role="alert">
-        Email or Password is invalid!
+              Email or Password is invalid!
         </div>`;
           }
         } else {
           // FALLBACK FOR WRONG INPUT CREDENTIAL
           errorbox.innerHTML = `<div class="alert alert-danger" role="alert">
-      Email or Password is invalid!
+            Input field has no value!
+            
     </div>`;
         }
       });

@@ -601,6 +601,16 @@
     Input field has no value!
        </div>`;
           return false;
+        } else if (email.value.length === 0) {
+          errorbox.innerHTML = `<div class="alert alert-danger" role="alert">
+    Input field has no value!
+       </div>`;
+          return false;
+        } else if (userPassword.value.length < 4) {
+          errorbox.innerHTML = `<div class="alert alert-danger" role="alert">
+    Input 4 digits password!
+       </div>`;
+          return false;
         }
       }
     </script>
