@@ -37,6 +37,8 @@ sendEmailHandler.addEventListener("click", (e) => {
     }
   );
 
-  alert("Subcribe");
+  alert(
+    "Thank yoy for subscribing to our newsletter! Look forward to exclusive promo codes and sales from our digital shop!"
+  );
   emailInput.value = "";
 });
