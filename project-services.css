@@ -21,9 +21,14 @@ html {
   width: 652px;
   letter-spacing: 4px;
 }
+@media screen and (max-width: 320px) {
+  .btn-sendM {
+    width: 300px !important;
+  }
+}
 @media screen and (max-width: 376px) {
   .btn-sendM {
-    width: 349px;
+    width: 310px;
   }
 }
 
@@ -34,6 +39,16 @@ html {
   border-radius: 5px;
   margin-right: 2px;
   background-color: rgba(57, 169, 15, 0.2);
+}
+@media screen and (max-width: 320px) {
+  .iemail2 {
+    width: 159px !important;
+  }
+}
+@media screen and (max-width: 376px) {
+  .btn-sendM {
+    width: 350px;
+  }
 }
 @media screen and (max-width: 376px) {
   .iemail2 {
@@ -48,6 +63,11 @@ html {
 @media screen and (max-width: 768px) {
   .heading-1 {
     margin-top: 19% !important;
+  }
+}
+@media screen and (max-width: 320px) {
+  .heading-1 {
+    margin-top: 32% !important;
   }
 }
 
@@ -164,6 +184,16 @@ h1 {
 .services-section {
   margin-top: 10%;
   padding: 0 3rem 0 3rem;
+}
+@media screen and (max-width: 320px) {
+  .services-section {
+    padding: 1%;
+  }
+}
+@media screen and (max-width: 376px) {
+  .services-section {
+    padding: 2%;
+  }
 }
 
 .serv2 {

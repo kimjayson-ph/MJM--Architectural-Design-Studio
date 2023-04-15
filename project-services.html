@@ -711,14 +711,14 @@
               class="form-control iemail2 p-2 rounded-0"
               type="text"
               placeholder="enter your name"
-              id="Name"
+              id="contactName"
               required
             />
             <input
               class="form-control iemail2 p-2 rounded-0"
               type="email"
               placeholder="enter your email"
-              id="eMail"
+              id="contactEmail"
               required
             />
           </div>
@@ -728,11 +728,15 @@
               class="form-control iemail3 p-2 mt-3 rounded-0"
               placeholder="enter your message"
               name=""
-              id="textArea"
+              id="contactMessage"
               required
             ></textarea>
           </div>
-          <button class="btn btncolor btn-sendM mt-3 rounded-0" type="submit">
+          <button
+            class="btn btncolor btn-sendM mt-3 rounded-0"
+            type="submit"
+            id="contactHandler"
+          >
             SEND A MESSAGE
           </button>
         </form>
@@ -963,6 +967,33 @@
       const navLogOut = document.querySelector(".navLogOut");
       const removeLogin = document.querySelector(".removeLogin");
       const removeRegister = document.querySelector(".removeRegister");
+      const contactName = document.getElementById("contactName");
+      const contactEmail = document.getElementById("contactEmail");
+      const contactMessage = document.getElementById("contactMessage");
+
+      const contactHandler = document.getElementById("contactHandler");
+
+      contactHandler.addEventListener("click", (e) => {
+        e.preventDefault();
+        const isValidated = contactValidation();
+        if (isValidated) {
+          alert("Thank you for messaging us!");
+        }
+      });
+
+      function contactValidation() {
+        if (contactEmail.value.length === 0) {
+          alert("Email is required!");
+        } else if (contactName.value.length === 0) {
+          alert("Name is required!");
+        } else if (contactMessage.value.length === 0) {
+          alert("Message is requred!");
+        } else {
+          return true;
+        }
+
+        return false;
+      }
 
       let userData = user.find((data) => {
         return data.isLoggedIn === true;
